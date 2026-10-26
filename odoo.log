@@ -528,3 +528,129 @@
 2026-10-26 17:18:35,455 19424 INFO ? odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 10 connections  
 2026-10-26 17:18:35,455 19424 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
 2026-10-26 17:18:35,467 19424 INFO ? odoo.service.server: cron1 max age (0s) reached, releasing connection. 
+2026-10-26 17:35:19,795 24300 INFO ? odoo: Odoo version 19.0-20261026 
+2026-10-26 17:35:19,795 24300 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-10-26 17:35:19,795 24300 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-10-26 17:35:19,795 24300 INFO ? odoo: database: odoo@localhost:5432 
+2026-10-26 17:35:21,623 24300 INFO ? odoo.service.server: HTTP service (werkzeug) running on Asta:8069 
+2026-10-26 17:35:26,832 24300 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-10-26 17:35:26,837 24300 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-10-26 17:35:26,845 24300 INFO ? odoo.modules.loading: loading 14 modules... 
+2026-10-26 17:35:27,248 24300 INFO ? odoo.modules.loading: 14 modules loaded in 0.40s, 0 queries (+0 extra) 
+2026-10-26 17:35:27,276 24300 INFO ? odoo.modules.loading: Modules loaded. 
+2026-10-26 17:35:27,287 24300 INFO ? odoo.registry: Registry loaded in 0.630s 
+2026-10-26 17:35:27,288 24300 INFO Test odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-10-26 17:35:27,298 24300 INFO Test odoo.addons.base.models.res_device: User 2 inserts device log (UeWgaQhbRLwElIT4SEO8K6oh8POxbUTaUyakV7wvwn) 
+2026-10-26 17:35:27,316 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:27] "GET / HTTP/1.1" 303 - 32 0.073 0.592
+2026-10-26 17:35:28,055 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "GET /odoo HTTP/1.1" 200 - 55 0.039 0.694
+2026-10-26 17:35:28,132 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "GET /web/webclient/load_menus HTTP/1.1" 200 - 12 0.013 0.009
+2026-10-26 17:35:28,163 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 6 0.001 0.007
+2026-10-26 17:35:28,540 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "POST /web/action/load HTTP/1.1" 200 - 10 0.077 0.220
+2026-10-26 17:35:28,571 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.009 0.290
+2026-10-26 17:35:28,603 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 15 0.052 0.282
+2026-10-26 17:35:28,603 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 5 0.022 0.309
+2026-10-26 17:35:28,810 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.004 0.075
+2026-10-26 17:35:28,813 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.005 0.030
+2026-10-26 17:35:28,831 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.1" 200 - 41 0.279 0.279
+2026-10-26 17:35:28,832 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "POST /bus/has_missed_notifications HTTP/1.1" 200 - 2 0.002 0.015
+2026-10-26 17:35:28,835 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:28] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 43 0.297 0.262
+2026-10-26 17:35:28,956 24300 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-10-26 17:35:29,126 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:29] "GET /web/webclient/translations?hash=d826b2b8cc59f1c10a0233d5f691a42f930f506a&lang=uk_UA HTTP/1.1" 200 - 2 0.001 0.948
+2026-10-26 17:35:29,151 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:29] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 2 0.060 0.438
+2026-10-26 17:35:30,462 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:30] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.002 0.005
+2026-10-26 17:35:34,507 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:34] "POST /web/action/load HTTP/1.1" 200 - 9 0.013 0.007
+2026-10-26 17:35:34,550 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:34] "POST /web/dataset/call_kw/res.config.settings/get_views#res.config.settings.get_views HTTP/1.1" 200 - 9 0.005 0.022
+2026-10-26 17:35:34,599 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:34] "POST /web/dataset/call_kw/res.config.settings/onchange#res.config.settings.onchange HTTP/1.1" 200 - 29 0.019 0.020
+2026-10-26 17:35:34,623 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:34] "POST /base_setup/demo_active HTTP/1.1" 200 - 2 0.001 0.002
+2026-10-26 17:35:34,639 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:34] "POST /base_setup/data HTTP/1.1" 200 - 6 0.010 0.003
+2026-10-26 17:35:34,648 24300 INFO ? werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:34] "GET /base/static/description/settings.png HTTP/1.1" 200 - 0 0.000 0.002
+2026-10-26 17:35:43,076 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:43] "GET /odoo/settings?debug=1 HTTP/1.1" 200 - 9 0.006 0.013
+2026-10-26 17:35:43,175 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:43] "GET /web/webclient/load_menus HTTP/1.1" 200 - 9 0.005 0.023
+2026-10-26 17:35:43,181 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:43] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 4 0.006 0.005
+2026-10-26 17:35:43,208 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:43] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 8 0.002 0.010
+2026-10-26 17:35:43,211 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:43] "POST /web/dataset/call_kw/res.config.settings/get_views#res.config.settings.get_views HTTP/1.1" 200 - 1 0.001 0.011
+2026-10-26 17:35:43,246 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:43] "POST /web/dataset/call_kw/res.config.settings/onchange#res.config.settings.onchange HTTP/1.1" 200 - 9 0.003 0.011
+2026-10-26 17:35:43,278 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:43] "POST /base_setup/demo_active HTTP/1.1" 200 - 2 0.001 0.004
+2026-10-26 17:35:43,287 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:43] "POST /base_setup/data HTTP/1.1" 200 - 5 0.003 0.002
+2026-10-26 17:35:44,928 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:44] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.005
+2026-10-26 17:35:48,708 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:48] "POST /web/action/load HTTP/1.1" 200 - 10 0.003 0.011
+2026-10-26 17:35:48,720 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:48] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.1" 200 - 2 0.005 0.010
+2026-10-26 17:35:48,732 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:48] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 1 0.001 0.005
+2026-10-26 17:35:48,751 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:48] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.002 0.007
+2026-10-26 17:35:48,763 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:48] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 41 0.014 0.022
+2026-10-26 17:35:48,779 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:48] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 2 0.005 0.046
+2026-10-26 17:35:48,782 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:48] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.001 0.005
+2026-10-26 17:35:57,021 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:57] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 41 0.012 0.012
+2026-10-26 17:35:57,050 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:57] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 3 0.001 0.049
+2026-10-26 17:35:57,083 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:57] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.000 0.003
+2026-10-26 17:35:57,151 24300 INFO ? werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:57] "GET /base/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.004
+2026-10-26 17:35:57,152 24300 INFO ? werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:57] "GET /pos_mollie/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.003
+2026-10-26 17:35:59,851 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:59] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 41 0.012 0.017
+2026-10-26 17:35:59,865 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:59] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 2 0.004 0.006
+2026-10-26 17:35:59,873 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:35:59] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.001 0.002
+2026-10-26 17:36:05,934 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:05] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.007
+2026-10-26 17:36:05,956 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:05] "POST /web/dataset/call_kw/base.module.update/get_views#base.module.update.get_views HTTP/1.1" 200 - 11 0.003 0.011
+2026-10-26 17:36:05,967 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:05] "POST /web/dataset/call_kw/base.module.update/onchange#base.module.update.onchange HTTP/1.1" 200 - 2 0.001 0.003
+2026-10-26 17:36:07,030 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:07] "POST /web/dataset/call_kw/base.module.update/web_save#base.module.update.web_save HTTP/1.1" 200 - 5 0.006 0.005
+2026-10-26 17:36:07,039 24300 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user test@gmail.com #2 via 127.0.0.1 
+2026-10-26 17:36:07,791 24300 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-10-26 17:36:07,792 24300 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-10-26 17:36:08,205 24300 INFO Test odoo.registry: Caches invalidated, signaling through the database: ['stable'] 
+2026-10-26 17:36:08,208 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:08] "POST /web/dataset/call_button/base.module.update/update_module#base.module.update.update_module HTTP/1.1" 200 - 1717 0.355 0.818
+2026-10-26 17:36:15,810 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:15] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 49 0.020 0.012
+2026-10-26 17:36:15,846 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:15] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 5 0.013 0.053
+2026-10-26 17:36:15,856 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:15] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 3 0.002 0.039
+2026-10-26 17:36:15,885 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:15] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.002 0.002
+2026-10-26 17:36:39,499 20204 INFO ? odoo: Odoo version 19.0-20261026 
+2026-10-26 17:36:39,499 20204 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-10-26 17:36:39,499 20204 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-10-26 17:36:39,499 20204 INFO ? odoo: database: odoo@localhost:5432 
+2026-10-26 17:36:41,812 20204 INFO ? odoo.service.server: HTTP service (werkzeug) running on Asta:8069 
+2026-10-26 17:36:42,830 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:42] "GET /odoo/apps?debug=1 HTTP/1.1" 200 - 27 0.008 0.021
+2026-10-26 17:36:42,926 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:42] "GET /web/webclient/load_menus HTTP/1.1" 200 - 10 0.005 0.017
+2026-10-26 17:36:42,933 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:42] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 6 0.008 0.005
+2026-10-26 17:36:42,951 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:42] "GET /web/webclient/translations?hash=d826b2b8cc59f1c10a0233d5f691a42f930f506a&lang=uk_UA HTTP/1.1" 200 - 2 0.003 0.021
+2026-10-26 17:36:42,978 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:42] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 15 0.006 0.013
+2026-10-26 17:36:43,002 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:43] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 1 0.002 0.010
+2026-10-26 17:36:43,024 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:43] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.1" 200 - 24 0.036 0.025
+2026-10-26 17:36:43,037 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:43] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.003 0.004
+2026-10-26 17:36:43,043 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:43] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 41 0.023 0.027
+2026-10-26 17:36:43,054 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:43] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 2 0.008 0.053
+2026-10-26 17:36:43,064 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:43] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.001 0.003
+2026-10-26 17:36:43,103 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:43] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.000 0.005
+2026-10-26 17:36:44,764 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:44] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.000 0.004
+2026-10-26 17:36:46,573 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:46] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 41 0.011 0.018
+2026-10-26 17:36:46,583 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:46] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 2 0.001 0.005
+2026-10-26 17:36:46,591 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:46] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.003 0.001
+2026-10-26 17:36:53,981 24300 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Library Rental'] to user test@gmail.com #2 via 127.0.0.1 
+2026-10-26 17:36:53,981 24300 INFO Test odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2026-10-26 17:36:53,982 24300 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Library Rental'] to user test@gmail.com #2 via 127.0.0.1 
+2026-10-26 17:36:54,512 24300 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-10-26 17:36:54,515 24300 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-10-26 17:36:54,533 24300 INFO Test odoo.modules.loading: updating modules list 
+2026-10-26 17:36:54,534 24300 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-10-26 17:36:55,256 24300 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-10-26 17:36:55,509 24300 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-10-26 17:36:55,513 24300 INFO Test odoo.modules.loading: Loading module library_rental (15/15) 
+2026-10-26 17:36:55,607 24300 INFO Test odoo.addons.base.models.ir_module: module library_rental: no translation for language uk_UA 
+2026-10-26 17:36:55,614 24300 INFO Test odoo.modules.loading: Module library_rental loaded in 0.10s, 10 queries (+10 other) 
+2026-10-26 17:36:55,614 24300 INFO Test odoo.modules.loading: 15 modules loaded in 0.11s, 10 queries (+10 extra) 
+2026-10-26 17:36:55,791 24300 INFO Test odoo.modules.loading: Modules loaded. 
+2026-10-26 17:36:55,795 24300 INFO Test odoo.registry: Registry changed, signaling through the database 
+2026-10-26 17:36:55,796 24300 INFO Test odoo.registry: Registry loaded in 1.300s 
+2026-10-26 17:36:55,796 24300 INFO Test odoo.addons.base.models.ir_module: getting next ir.actions.todo() 
+2026-10-26 17:36:55,804 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:55] "POST /web/dataset/call_button/ir.module.module/button_immediate_install#ir.module.module.button_immediate_install HTTP/1.1" 200 - 2187 0.538 1.290
+2026-10-26 17:36:55,819 24300 INFO Test odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-10-26 17:36:56,477 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "GET /odoo HTTP/1.1" 200 - 59 0.014 0.647
+2026-10-26 17:36:56,573 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "GET /web/webclient/load_menus HTTP/1.1" 200 - 11 0.003 0.017
+2026-10-26 17:36:56,578 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 6 0.004 0.008
+2026-10-26 17:36:56,650 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "GET /web/webclient/translations?hash=&lang=uk_UA HTTP/1.1" 200 - 2 0.001 0.034
+2026-10-26 17:36:56,688 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "POST /web/action/load HTTP/1.1" 200 - 10 0.005 0.008
+2026-10-26 17:36:56,701 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 15 0.015 0.011
+2026-10-26 17:36:56,753 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "POST /web/dataset/call_kw/ir.module.module/get_views#ir.module.module.get_views HTTP/1.1" 200 - 45 0.011 0.041
+2026-10-26 17:36:56,764 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 1 0.000 0.005
+2026-10-26 17:36:56,780 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.002 0.006
+2026-10-26 17:36:56,796 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range#ir.module.module.search_panel_select_range HTTP/1.1" 200 - 43 0.019 0.016
+2026-10-26 17:36:56,809 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "POST /web/dataset/call_kw/ir.module.module/web_search_read#ir.module.module.web_search_read HTTP/1.1" 200 - 3 0.005 0.042
+2026-10-26 17:36:56,840 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:56] "POST /web/dataset/call_kw/ir.module.module/check_module_update#ir.module.module.check_module_update HTTP/1.1" 200 - 2 0.003 0.001
+2026-10-26 17:36:58,426 24300 INFO Test werkzeug: 127.0.0.1 - - [26/Oct/2026 17:36:58] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.003
