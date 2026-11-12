@@ -17,6 +17,16 @@
         <field name="isbn">9780321125217</field>
         <field name="publish_year">2003</field>
     </record>
+    <record id="book_kobzar" model="library.book">
+        <field name="name">Кобзар</field>
+        <field name="author">Тарас Шевченко</field>
+        <field name="publish_year">1840</field>
+    </record>
+    <record id="book_1984" model="library.book">
+        <field name="name">1984</field>
+        <field name="author">Джордж Орвелл</field>
+        <field name="publish_year">1949</field>
+    </record>
 
     <record id="copy_clean_code_001" model="library.copy">
         <field name="book_id" ref="book_clean_code"/>
@@ -37,6 +47,46 @@
         <field name="book_id" ref="book_domain_driven_design"/>
         <field name="inventory_number">DDD-001</field>
         <field name="condition">damaged</field>
+    </record>
+    <record id="copy_kobzar_1" model="library.copy">
+        <field name="book_id" ref="book_kobzar"/>
+        <field name="inventory_number">LIB-0001</field>
+        <field name="condition">new</field>
+    </record>
+    <record id="copy_kobzar_2" model="library.copy">
+        <field name="book_id" ref="book_kobzar"/>
+        <field name="inventory_number">LIB-0002</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_kobzar_3" model="library.copy">
+        <field name="book_id" ref="book_kobzar"/>
+        <field name="inventory_number">LIB-0003</field>
+        <field name="condition">damaged</field>
+    </record>
+    <record id="copy_kobzar_4" model="library.copy">
+        <field name="book_id" ref="book_kobzar"/>
+        <field name="inventory_number">LIB-0004</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_1984_1" model="library.copy">
+        <field name="book_id" ref="book_1984"/>
+        <field name="inventory_number">LIB-0005</field>
+        <field name="condition">new</field>
+    </record>
+    <record id="copy_1984_2" model="library.copy">
+        <field name="book_id" ref="book_1984"/>
+        <field name="inventory_number">LIB-0006</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_1984_3" model="library.copy">
+        <field name="book_id" ref="book_1984"/>
+        <field name="inventory_number">LIB-0007</field>
+        <field name="condition">damaged</field>
+    </record>
+    <record id="copy_1984_4" model="library.copy">
+        <field name="book_id" ref="book_1984"/>
+        <field name="inventory_number">LIB-0008</field>
+        <field name="condition">good</field>
     </record>
 
     <record id="user_reader_demo" model="res.users">
@@ -59,6 +109,14 @@
         <field name="name">Олена Шевченко</field>
         <field name="membership_number">LIB-003</field>
     </record>
+    <record id="member_kateryna" model="library.member">
+        <field name="name">Катерина Бондаренко</field>
+        <field name="membership_number">LIB-M-004</field>
+    </record>
+    <record id="member_maksym" model="library.member">
+        <field name="name">Максим Романюк</field>
+        <field name="membership_number">LIB-M-005</field>
+    </record>
 
     <record id="loan_clean_code_anna" model="library.loan">
         <field name="copy_id" ref="copy_clean_code_001"/>
@@ -76,7 +134,7 @@
         <field name="copy_id" ref="copy_domain_001"/>
         <field name="member_id" ref="member_olena"/>
         <field name="loan_date" eval="(datetime.date.today() - datetime.timedelta(days=31)).strftime('%Y-%m-%d')"/>
-        <field name="return_date" eval="(datetime.date.today() - datetime.timedelta(days=14)).strftime('%Y-%m-%d')"/>
+        <field name="return_date" eval="(datetime.date.today() - datetime.timedelta(days=18)).strftime('%Y-%m-%d')"/>
         <field name="state">returned</field>
     </record>
     <record id="loan_clean_code_anna_returned" model="library.loan">
@@ -84,6 +142,46 @@
         <field name="member_id" ref="member_anna"/>
         <field name="loan_date" eval="(datetime.date.today() - datetime.timedelta(days=20)).strftime('%Y-%m-%d')"/>
         <field name="return_date" eval="(datetime.date.today() - datetime.timedelta(days=6)).strftime('%Y-%m-%d')"/>
+        <field name="state">returned</field>
+    </record>
+    <record id="loan_05" model="library.loan">
+        <field name="copy_id" ref="copy_kobzar_1"/>
+        <field name="member_id" ref="member_kateryna"/>
+        <field name="loan_date" eval="(datetime.date.today() - datetime.timedelta(days=20)).strftime('%Y-%m-%d')"/>
+        <field name="state">active</field>
+    </record>
+    <record id="loan_06" model="library.loan">
+        <field name="copy_id" ref="copy_1984_1"/>
+        <field name="member_id" ref="member_maksym"/>
+        <field name="loan_date" eval="(datetime.date.today() - datetime.timedelta(days=3)).strftime('%Y-%m-%d')"/>
+        <field name="state">active</field>
+    </record>
+    <record id="loan_07" model="library.loan">
+        <field name="copy_id" ref="copy_kobzar_2"/>
+        <field name="member_id" ref="member_bohdan"/>
+        <field name="loan_date" eval="(datetime.date.today() - datetime.timedelta(days=8)).strftime('%Y-%m-%d')"/>
+        <field name="state">active</field>
+    </record>
+    <record id="loan_08" model="library.loan">
+        <field name="copy_id" ref="copy_1984_2"/>
+        <field name="member_id" ref="member_olena"/>
+        <field name="loan_date" eval="(datetime.date.today() - datetime.timedelta(days=20)).strftime('%Y-%m-%d')"/>
+        <field name="return_date" eval="(datetime.date.today() - datetime.timedelta(days=8)).strftime('%Y-%m-%d')"/>
+        <field name="state">returned</field>
+    </record>
+    <record id="loan_09" model="library.loan">
+        <field name="copy_id" ref="copy_kobzar_3"/>
+        <field name="member_id" ref="member_kateryna"/>
+        <field name="loan_date" eval="(datetime.date.today() - datetime.timedelta(days=30)).strftime('%Y-%m-%d')"/>
+        <field name="return_date" eval="(datetime.date.today() - datetime.timedelta(days=13)).strftime('%Y-%m-%d')"/>
+        <field name="state">returned</field>
+    </record>
+    <record id="loan_10" model="library.loan">
+        <field name="copy_id" ref="copy_1984_3"/>
+        <field name="member_id" ref="member_anna"/>
+        <field name="loan_date" eval="(datetime.date.today() - datetime.timedelta(days=40)).strftime('%Y-%m-%d')"/>
+        <field name="return_date" eval="(datetime.date.today() - datetime.timedelta(days=19)).strftime('%Y-%m-%d')"/>
+        <field name="return_note">Пошкоджено обкладинку під час користування.</field>
         <field name="state">returned</field>
     </record>
 </odoo>
