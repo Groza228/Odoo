@@ -34,6 +34,10 @@ class LibraryLoan(models.Model):
         store=True,
     )
     return_date = fields.Date(string='Дата повернення')
+    is_late_return = fields.Boolean(
+        compute='_compute_is_late_return',
+        store=True,
+    )
     fine_amount = fields.Float(
         string='Штраф (фінальний)',
         compute='_compute_fine_amount',
@@ -111,6 +115,15 @@ class LibraryLoan(models.Model):
                 else 0.0
             )
 
+    @api.depends('due_date', 'return_date')
+    def _compute_is_late_return(self):
+        for rec in self:
+            rec.is_late_return = bool(
+                rec.return_date
+                and rec.due_date
+                and rec.return_date > rec.due_date
+            )
+
     @api.depends('state', 'due_date')
     def _compute_is_overdue(self):
         for rec in self:
@@ -152,8 +165,9 @@ class LibraryLoan(models.Model):
                 )
             else:
                 today = fields.Date.context_today(rec)
+                late_date = rec.return_date or today
                 rec.days_late = (
-                    max((today - rec.due_date).days, 0)
+                    max((late_date - rec.due_date).days, 0)
                     if rec.due_date
                     else 0
                 )
@@ -167,22 +181,32 @@ class LibraryLoan(models.Model):
                 else rec.days_late * FINE_PER_DAY
             )
 
-    @api.depends('state', 'loan_date', 'due_date')
+    @api.depends('state', 'loan_date', 'due_date', 'return_date')
     def _compute_display_state(self):
         today = fields.Date.context_today(self)
         for rec in self:
             if rec.state == 'returned':
                 rec.display_state = 'returned'
-            elif rec.due_date and rec.due_date < today:
+            elif (
+                rec.return_date
+                and rec.due_date
+                and rec.return_date > rec.due_date
+            ) or (rec.due_date and rec.due_date < today):
                 rec.display_state = 'overdue'
             else:
                 rec.display_state = 'active'
 
     def _search_display_state(self, operator, value):
         today = fields.Date.context_today(self)
-        overdue = [('state', '=', 'active'), ('due_date', '<', today)]
+        overdue = [
+            ('state', '=', 'active'),
+            '|',
+            ('due_date', '<', today),
+            ('is_late_return', '=', True),
+        ]
         active = [
             ('state', '=', 'active'),
+            ('is_late_return', '=', False),
             '|',
             ('due_date', '>=', today),
             ('due_date', '=', False),
