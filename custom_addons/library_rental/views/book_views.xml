@@ -154,6 +154,20 @@
         <field name="model">library.loan</field>
         <field name="arch" type="xml">
             <form string="Видача">
+                <header>
+                    <button
+                        name="action_return"
+                        string="Повернути"
+                        type="object"
+                        class="btn-primary"
+                        invisible="state != 'active'"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="active,returned"
+                    />
+                </header>
                 <sheet>
                     <group>
                         <group>
@@ -168,7 +182,6 @@
                             <field name="loan_date"/>
                             <field name="due_date"/>
                             <field name="return_date"/>
-                            <field name="state"/>
                         </group>
                     </group>
                 </sheet>

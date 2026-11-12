@@ -1,4 +1,5 @@
 from odoo import fields, models
+from odoo.exceptions import ValidationError
 
 
 class LibraryLoan(models.Model):
@@ -21,10 +22,8 @@ class LibraryLoan(models.Model):
     due_date = fields.Date(string='Повернути до')
     return_date = fields.Date(string='Дата повернення')
     state = fields.Selection(
-        selection=[
-            ('active', 'Активна'),
-            ('returned', 'Повернена'),
-        ],
+        selection=[('active', 'Видано'), ('returned', 'Повернено')],
+        string='Статус',
         default='active',
         required=True,
     )
@@ -50,3 +49,12 @@ class LibraryLoan(models.Model):
         string='Імʼя читача',
         readonly=True,
     )
+
+    def action_return(self):
+        for rec in self:
+            if rec.state == 'returned':
+                raise ValidationError('Цю видачу вже було повернено.')
+            rec.state = 'returned'
+            if not rec.return_date:
+                rec.return_date = fields.Date.context_today(rec)
+        return True
