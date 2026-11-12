@@ -243,7 +243,16 @@ class LibraryLoan(models.Model):
                 )
 
     def write(self, vals):
-        if 'loan_date' in vals and not self.env.context.get('allow_loan_date_change'):
+        ctx = self.env.context
+        if 'return_date' in vals and not ctx.get('allow_return_date_change'):
+            new_date = fields.Date.to_date(vals['return_date'])
+            for rec in self:
+                if rec.state == 'returned' and rec.return_date != new_date:
+                    raise ValidationError(
+                        'Дату повернення не можна змінювати після повернення '
+                        'видачі. Скористайтесь кнопкою «Відновити».'
+                    )
+        if 'loan_date' in vals and not ctx.get('allow_loan_date_change'):
             new_date = fields.Date.to_date(vals['loan_date'])
             for rec in self:
                 if rec.loan_date != new_date:
@@ -256,9 +265,9 @@ class LibraryLoan(models.Model):
         for rec in self:
             if rec.state == 'returned':
                 raise ValidationError('Цю видачу вже було повернено.')
-            rec.state = 'returned'
             if not rec.return_date:
                 rec.return_date = fields.Date.context_today(rec)
+            rec.state = 'returned'
         return True
 
     def action_restore(self):
@@ -275,5 +284,7 @@ class LibraryLoan(models.Model):
                     'Цей примірник уже має іншу активну видачу, '
                     'тому відновити цю видачу неможливо.'
                 )
-            rec.write({'state': 'active', 'return_date': False})
+            rec.with_context(allow_return_date_change=True).write(
+                {'state': 'active', 'return_date': False}
+            )
         return True

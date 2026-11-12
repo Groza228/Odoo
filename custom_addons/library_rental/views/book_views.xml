@@ -147,7 +147,7 @@
                 <field name="member_id"/>
                 <field name="loan_date" readonly="1"/>
                 <field name="due_date"/>
-                <field name="return_date"/>
+                <field name="return_date" readonly="state == 'returned'"/>
                 <field name="state"/>
                 <field name="display_state" widget="badge"/>
                 <field name="days_late"/>
@@ -203,7 +203,7 @@
                             <field name="member_name"/>
                             <field name="loan_date" readonly="id"/>
                             <field name="due_date"/>
-                            <field name="return_date"/>
+                            <field name="return_date" readonly="state == 'returned'"/>
                             <field name="days_late" readonly="1" invisible="days_late == 0"/>
                             <field
                                 name="current_fine"
