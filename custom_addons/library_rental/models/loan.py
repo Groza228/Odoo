@@ -1,5 +1,8 @@
-from odoo import fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
+
+
+LOAN_PERIOD_DAYS = 14
 
 
 class LibraryLoan(models.Model):
@@ -19,7 +22,11 @@ class LibraryLoan(models.Model):
         ondelete='restrict',
     )
     loan_date = fields.Date(string='Дата видачі', default=fields.Date.today, required=True)
-    due_date = fields.Date(string='Повернути до')
+    due_date = fields.Date(
+        string='Повернути до',
+        compute='_compute_due_date',
+        store=True,
+    )
     return_date = fields.Date(string='Дата повернення')
     state = fields.Selection(
         selection=[('active', 'Видано'), ('returned', 'Повернено')],
@@ -49,6 +56,15 @@ class LibraryLoan(models.Model):
         string='Імʼя читача',
         readonly=True,
     )
+
+    @api.depends('loan_date')
+    def _compute_due_date(self):
+        for rec in self:
+            rec.due_date = (
+                fields.Date.add(rec.loan_date, days=LOAN_PERIOD_DAYS)
+                if rec.loan_date
+                else False
+            )
 
     def action_return(self):
         for rec in self:
