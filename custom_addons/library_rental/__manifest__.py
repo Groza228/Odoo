@@ -4,6 +4,7 @@
     'category': 'Послуги',
     'depends': ['base', 'web'],
     'license': 'LGPL-3',
+    'description': 'Облік видач книг: книги, примірники, читачі, видачі, штрафи, повернення та звіт історії видач.',
     'data': [
         'security/library_security.xml',
         'security/ir.model.access.csv',
