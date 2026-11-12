@@ -6333,3 +6333,1940 @@ DETAIL:  На ключ (id)=(8) все ще є посилання в таблиці "library_loan".
 2026-11-12 10:51:46,525 21256 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:51:46] "POST /web/dataset/call_kw/library.loan/web_read#library.loan.web_read HTTP/1.1" 200 - 5 0.003 0.003
 2026-11-12 10:51:53,028 21256 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:51:53] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 1 0.000 0.005
 2026-11-12 10:51:54,278 21256 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:51:54] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.002 0.006
+2026-11-12 10:55:22,880 1688 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 10:55:25,161 1688 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1677, in start
+    rc = server.run(preload, stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 714, in run
+    rc = preload_registries(preload)
+  File "C:\Odoo\server\odoo\service\server.py", line 1591, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 10:56:17,748 21256 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 10:56:17,748 21256 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 10:56:18,268 21256 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-11-12 10:56:18,268 21256 INFO ? odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 7 connections  
+2026-11-12 10:56:19,182 13660 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 10:56:19,182 13660 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 10:56:19,182 13660 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 10:56:19,182 13660 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 10:56:21,002 13660 INFO ? odoo.service.server: HTTP service (werkzeug) running on Asta:8069 
+2026-11-12 10:56:21,141 13660 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-11-12 10:56:21,144 13660 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 10:56:21,148 13660 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 10:56:21,149 13660 INFO ? odoo.modules.loading: loading 15 modules... 
+2026-11-12 10:56:21,159 13660 WARNING ? py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Odoo\server\odoo\service\server.py", line 132, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 363, in handle
+    super().handle()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Odoo\server\odoo\http.py", line 2852, in __call__
+    response = request._serve_db()
+  File "C:\Odoo\server\odoo\http.py", line 2275, in _serve_db
+    registry = Registry(self.db)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 10:56:21,400 13660 INFO ? odoo.modules.loading: 15 modules loaded in 0.25s, 0 queries (+0 extra) 
+2026-11-12 10:56:21,431 13660 INFO ? odoo.modules.loading: Modules loaded. 
+2026-11-12 10:56:21,444 13660 INFO ? odoo.registry: Registry loaded in 0.409s 
+2026-11-12 10:56:21,445 13660 INFO Test odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-11-12 10:56:21,489 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:21] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.007 0.096
+2026-11-12 10:56:22,172 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:22] "GET /odoo/action-93 HTTP/1.1" 200 - 85 0.097 1.040
+2026-11-12 10:56:22,210 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:22] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 11 0.008 0.012
+2026-11-12 10:56:22,220 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:22] "GET /web/webclient/load_menus HTTP/1.1" 200 - 10 0.016 0.020
+2026-11-12 10:56:23,114 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:23] "GET /web/webclient/translations?hash=&lang=uk_UA HTTP/1.1" 200 - 2 0.001 0.774
+2026-11-12 10:56:23,126 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:23] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 4 0.003 0.003
+2026-11-12 10:56:23,200 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:23] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 15 0.012 0.043
+2026-11-12 10:56:23,210 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:23] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.007 0.044
+2026-11-12 10:56:23,220 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:23] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 26 0.041 0.029
+2026-11-12 10:56:23,241 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:23] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 5 0.006 0.004
+2026-11-12 10:56:23,543 13660 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-11-12 10:56:23,904 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:23] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.002 0.008
+2026-11-12 10:56:26,107 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:26] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 2 0.005 0.007
+2026-11-12 10:56:27,687 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:27] "POST /web/dataset/call_kw/library.member/web_name_search#library.member.web_name_search HTTP/1.1" 200 - 3 0.003 0.002
+2026-11-12 10:56:29,968 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:29] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.000 0.007
+2026-11-12 10:56:32,104 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:32] "POST /web/action/load HTTP/1.1" 200 - 9 0.012 0.007
+2026-11-12 10:56:32,131 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:32] "POST /web/dataset/call_kw/library.member/get_views#library.member.get_views HTTP/1.1" 200 - 15 0.012 0.010
+2026-11-12 10:56:32,139 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:32] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.002 0.002
+2026-11-12 10:56:32,971 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:32] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.006
+2026-11-12 10:56:32,998 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:32] "POST /web/dataset/call_kw/library.copy/get_views#library.copy.get_views HTTP/1.1" 200 - 17 0.002 0.017
+2026-11-12 10:56:33,009 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:33] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 4 0.003 0.003
+2026-11-12 10:56:33,403 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:33] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.006
+2026-11-12 10:56:33,428 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:33] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 15 0.009 0.011
+2026-11-12 10:56:33,437 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:33] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 3 0.002 0.003
+2026-11-12 10:56:34,039 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:34] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.000 0.007
+2026-11-12 10:56:34,324 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:34] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.001 0.005
+2026-11-12 10:56:34,869 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:34] "POST /web/action/load HTTP/1.1" 200 - 9 0.001 0.008
+2026-11-12 10:56:34,885 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:34] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.003 0.005
+2026-11-12 10:56:57,068 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:57] "GET /odoo/action-93 HTTP/1.1" 200 - 9 0.004 0.012
+2026-11-12 10:56:57,087 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:57] "GET /web/webclient/load_menus HTTP/1.1" 200 - 1 0.001 0.006
+2026-11-12 10:56:57,100 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:57] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 4 0.002 0.002
+2026-11-12 10:56:57,146 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:57] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 3 0.002 0.003
+2026-11-12 10:56:57,169 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:57] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 8 0.004 0.010
+2026-11-12 10:56:57,173 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:57] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 2 0.003 0.013
+2026-11-12 10:56:57,178 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:57] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.001 0.007
+2026-11-12 10:56:57,221 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:57] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.000 0.007
+2026-11-12 10:56:58,691 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:58] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.011
+2026-11-12 10:56:58,699 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:58] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.002 0.008
+2026-11-12 10:56:58,774 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:58] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.003
+2026-11-12 10:56:59,979 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:59] "POST /web/action/load HTTP/1.1" 200 - 9 0.007 0.007
+2026-11-12 10:56:59,988 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:59] "POST /web/dataset/call_kw/library.copy/get_views#library.copy.get_views HTTP/1.1" 200 - 2 0.002 0.009
+2026-11-12 10:56:59,990 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:56:59] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.005 0.006
+2026-11-12 10:57:00,493 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:00] "POST /web/action/load HTTP/1.1" 200 - 9 0.005 0.011
+2026-11-12 10:57:00,499 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:00] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.002 0.008
+2026-11-12 10:57:00,505 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:00] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 2 0.002 0.019
+2026-11-12 10:57:00,868 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:00] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.001 0.004
+2026-11-12 10:57:02,160 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:02] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.002 0.004
+2026-11-12 10:57:02,528 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:02] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.003 0.002
+2026-11-12 10:57:03,120 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:03] "POST /web/action/load HTTP/1.1" 200 - 9 0.008 0.008
+2026-11-12 10:57:03,124 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:03] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.002 0.007
+2026-11-12 10:57:03,130 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:03] "POST /web/dataset/call_kw/library.member/get_views#library.member.get_views HTTP/1.1" 200 - 2 0.002 0.017
+2026-11-12 10:57:03,436 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:03] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.003 0.004
+2026-11-12 10:57:19,187 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:19] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.001 0.004
+2026-11-12 10:57:20,040 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:20] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.001 0.005
+2026-11-12 10:57:20,428 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:20] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.001 0.003
+2026-11-12 10:57:21,106 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-11-12 10:57:21,190 13660 INFO Test odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-11-12 10:57:21,192 13660 INFO Test odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-11-12 10:57:21,194 13660 INFO Test odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-11-12 10:57:21,195 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 10:57:21,219 13660 INFO Test odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-11-12 10:57:21,225 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 10:57:21,236 13660 INFO Test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-11-12 10:57:21,263 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.17s) 
+2026-11-12 10:57:22,169 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:22] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.002 0.004
+2026-11-12 10:57:23,132 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:23] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.001 0.005
+2026-11-12 10:57:23,917 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:23] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.002 0.006
+2026-11-12 10:57:24,617 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:24] "POST /web/dataset/call_kw/library.member/web_read#library.member.web_read HTTP/1.1" 200 - 2 0.002 0.004
+2026-11-12 10:57:32,314 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:32] "POST /web/dataset/call_kw/res.users/action_get#res.users.action_get HTTP/1.1" 200 - 11 0.003 0.013
+2026-11-12 10:57:32,369 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:32] "POST /web/dataset/call_kw/res.users/get_views#res.users.get_views HTTP/1.1" 200 - 38 0.016 0.031
+2026-11-12 10:57:32,399 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:32] "POST /web/dataset/call_kw/res.users/web_read#res.users.web_read HTTP/1.1" 200 - 18 0.014 0.009
+2026-11-12 10:57:32,452 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:32] "GET /web/image/res.users/2/avatar_128 HTTP/1.1" 200 - 8 0.000 0.009
+2026-11-12 10:57:36,133 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:36] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.002 0.004
+2026-11-12 10:57:47,384 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:47] "POST /web/action/load HTTP/1.1" 200 - 9 0.004 0.007
+2026-11-12 10:57:47,412 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:47] "POST /web/dataset/call_kw/res.config.settings/get_views#res.config.settings.get_views HTTP/1.1" 200 - 9 0.003 0.018
+2026-11-12 10:57:47,442 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:47] "POST /web/dataset/call_kw/res.config.settings/onchange#res.config.settings.onchange HTTP/1.1" 200 - 31 0.008 0.015
+2026-11-12 10:57:47,464 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:47] "POST /base_setup/demo_active HTTP/1.1" 200 - 2 0.001 0.003
+2026-11-12 10:57:47,471 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:47] "POST /base_setup/data HTTP/1.1" 200 - 6 0.003 0.003
+2026-11-12 10:57:47,478 13660 INFO ? werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:47] "GET /base/static/description/settings.png HTTP/1.1" 200 - 0 0.000 0.002
+2026-11-12 10:57:52,128 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:52] "POST /web/dataset/call_kw/res.config.settings/web_save#res.config.settings.web_save HTTP/1.1" 200 - 18 0.010 0.011
+2026-11-12 10:57:52,150 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:52] "POST /web/action/load HTTP/1.1" 200 - 12 0.006 0.011
+2026-11-12 10:57:52,211 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:52] "POST /web/dataset/call_kw/res.users/get_views#res.users.get_views HTTP/1.1" 200 - 33 0.017 0.038
+2026-11-12 10:57:52,241 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:52] "POST /web/dataset/call_kw/res.users/web_search_read#res.users.web_search_read HTTP/1.1" 200 - 17 0.005 0.019
+2026-11-12 10:57:55,230 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:57:55] "POST /web/dataset/call_kw/res.users/web_read#res.users.web_read HTTP/1.1" 200 - 39 0.018 0.029
+2026-11-12 10:58:03,468 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:58:03] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 27 0.010 0.025
+2026-11-12 10:58:04,851 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:58:04] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 26 0.012 0.022
+2026-11-12 10:58:05,642 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:58:05] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 26 0.006 0.027
+2026-11-12 10:58:10,651 13660 INFO Test odoo.registry: Caches invalidated, signaling through the database: ['default', 'stable'] 
+2026-11-12 10:58:10,654 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:58:10] "POST /web/dataset/call_kw/res.users/web_save#res.users.web_save HTTP/1.1" 200 - 71 0.029 0.042
+2026-11-12 10:58:13,349 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:58:13] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 22 0.013 0.015
+2026-11-12 10:58:29,330 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:58:29] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 4 0.002 0.010
+2026-11-12 10:58:42,137 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:58:42] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 4 0.001 0.006
+2026-11-12 10:58:44,197 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:58:44] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 7 0.002 0.014
+2026-11-12 10:59:14,719 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:14] "POST /web/dataset/call_kw/res.users/web_save#res.users.web_save HTTP/1.1" 200 - 50 0.026 0.047
+2026-11-12 10:59:14,746 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:14] "GET /web/image/res.users/5/avatar_128 HTTP/1.1" 200 - 16 0.006 0.012
+2026-11-12 10:59:18,734 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:18] "POST /web/dataset/call_button/res.users/action_change_password_wizard#res.users.action_change_password_wizard HTTP/1.1" 200 - 1 0.001 0.002
+2026-11-12 10:59:18,758 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:18] "POST /web/dataset/call_kw/change.password.wizard/get_views#change.password.wizard.get_views HTTP/1.1" 200 - 18 0.007 0.012
+2026-11-12 10:59:18,769 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:18] "POST /web/dataset/call_kw/change.password.wizard/onchange#change.password.wizard.onchange HTTP/1.1" 200 - 5 0.002 0.005
+2026-11-12 10:59:26,352 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:26] "POST /web/dataset/call_kw/change.password.wizard/web_save#change.password.wizard.web_save HTTP/1.1" 200 - 11 0.008 0.009
+2026-11-12 10:59:26,366 13660 INFO Test odoo.addons.base.models.res_users: Password change for 'stepan@gmail.com' (#5) by 'test@gmail.com' (#2) from 127.0.0.1 
+2026-11-12 10:59:27,062 13660 INFO Test odoo.registry: Caches invalidated, signaling through the database: ['default'] 
+2026-11-12 10:59:27,063 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:27] "POST /web/dataset/call_button/change.password.wizard/change_password_button#change.password.wizard.change_password_button HTTP/1.1" 200 - 20 0.013 0.693
+2026-11-12 10:59:27,103 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:27] "POST /web/dataset/call_kw/res.users/web_read#res.users.web_read HTTP/1.1" 200 - 42 0.014 0.022
+2026-11-12 10:59:30,999 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:30] "GET /web/session/logout HTTP/1.1" 303 - 2 0.001 0.007
+2026-11-12 10:59:31,012 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:31] "GET /odoo HTTP/1.1" 303 - 1 0.002 0.007
+2026-11-12 10:59:31,318 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:31] "GET /web/login?redirect=%2Fodoo%3F HTTP/1.1" 200 - 42 0.015 0.287
+2026-11-12 10:59:31,332 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:31] "GET /web/binary/company_logo HTTP/1.1" 304 - 2 0.002 0.003
+2026-11-12 10:59:31,444 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:31] "GET /web/webclient/translations?hash=&lang= HTTP/1.1" 200 - 3 0.001 0.035
+2026-11-12 10:59:37,063 13660 INFO Test odoo.addons.base.models.res_users: Login successful for login:stepan@gmail.com from 127.0.0.1 
+2026-11-12 10:59:37,070 13660 INFO Test odoo.registry: Caches invalidated, signaling through the database: ['default'] 
+2026-11-12 10:59:37,071 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "POST /web/login HTTP/1.1" 303 - 21 0.013 0.763
+2026-11-12 10:59:37,083 13660 INFO Test odoo.addons.base.models.res_device: User 5 inserts device log (3i4-Nsc0wExUIE27dJX3OdRFHxuXOIGAaVU_1fOYg1) 
+2026-11-12 10:59:37,092 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "GET /odoo HTTP/1.1" 200 - 16 0.006 0.013
+2026-11-12 10:59:37,117 13660 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 5, model: ir.module.module 
+2026-11-12 10:59:37,326 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "GET /web/webclient/load_menus HTTP/1.1" 200 - 12 0.207 0.017
+2026-11-12 10:59:37,431 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "GET /web/webclient/translations?hash=2b6b5e856eafa8f36a62db36518c37552f19d65b&lang=uk_UA HTTP/1.1" 200 - 1 0.016 0.199
+2026-11-12 10:59:37,480 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 3 0.027 0.159
+2026-11-12 10:59:37,482 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "POST /web/action/load HTTP/1.1" 200 - 9 0.033 0.040
+2026-11-12 10:59:37,521 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "GET /web/image?model=res.users&field=avatar_128&id=5 HTTP/1.1" 200 - 15 0.068 0.127
+2026-11-12 10:59:37,538 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "GET /web/image/res.partner/6/avatar_128?unique=1794473976000 HTTP/1.1" 200 - 7 0.040 0.110
+2026-11-12 10:59:37,541 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.001 0.029
+2026-11-12 10:59:37,565 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 16 0.027 0.033
+2026-11-12 10:59:37,590 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 3 0.007 0.011
+2026-11-12 10:59:37,666 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:37] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 6 0.003 0.555
+2026-11-12 10:59:43,262 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:43] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.000 0.002
+2026-11-12 10:59:44,387 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:44] "POST /web/action/load HTTP/1.1" 200 - 9 0.005 0.009
+2026-11-12 10:59:44,403 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:44] "POST /web/dataset/call_kw/library.member/get_views#library.member.get_views HTTP/1.1" 200 - 5 0.003 0.008
+2026-11-12 10:59:44,414 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:44] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 3 0.004 0.004
+2026-11-12 10:59:45,686 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:45] "POST /web/dataset/call_kw/library.member/web_read#library.member.web_read HTTP/1.1" 200 - 2 0.001 0.004
+2026-11-12 10:59:47,972 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:47] "POST /web/action/load HTTP/1.1" 200 - 9 0.006 0.007
+2026-11-12 10:59:47,990 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:47] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 7 0.001 0.012
+2026-11-12 10:59:48,001 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:48] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 5 0.002 0.005
+2026-11-12 10:59:50,559 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:50] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.001 0.005
+2026-11-12 10:59:52,637 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:52] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.002 0.006
+2026-11-12 10:59:54,722 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:54] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.002 0.004
+2026-11-12 10:59:55,179 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:55] "POST /web/action/load HTTP/1.1" 200 - 9 0.002 0.007
+2026-11-12 10:59:55,194 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:55] "POST /web/dataset/call_kw/library.copy/get_views#library.copy.get_views HTTP/1.1" 200 - 3 0.002 0.006
+2026-11-12 10:59:55,204 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:55] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 4 0.001 0.005
+2026-11-12 10:59:55,648 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:55] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.001 0.006
+2026-11-12 10:59:56,187 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:56] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.001 0.007
+2026-11-12 10:59:56,560 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:56] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.002 0.006
+2026-11-12 10:59:56,800 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:56] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.002 0.004
+2026-11-12 10:59:57,069 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:57] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.003 0.005
+2026-11-12 10:59:59,623 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:59] "GET /web/session/logout HTTP/1.1" 303 - 1 0.001 0.006
+2026-11-12 10:59:59,635 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:59] "GET /odoo HTTP/1.1" 303 - 1 0.000 0.009
+2026-11-12 10:59:59,694 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:59] "GET /web/login?redirect=%2Fodoo%3F HTTP/1.1" 200 - 5 0.006 0.050
+2026-11-12 10:59:59,710 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:59] "GET /web/binary/company_logo HTTP/1.1" 304 - 2 0.005 0.002
+2026-11-12 10:59:59,760 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 10:59:59] "GET /web/webclient/translations?hash=27d9fd3fe1d322ca33722daf6a06f5b8af341a95&lang= HTTP/1.1" 200 - 2 0.000 0.019
+2026-11-12 11:00:04,738 13660 INFO Test odoo.addons.base.models.res_users: Login successful for login:test@gmail.com from 127.0.0.1 
+2026-11-12 11:00:04,747 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "POST /web/login HTTP/1.1" 303 - 21 0.008 0.784
+2026-11-12 11:00:04,757 13660 INFO Test odoo.addons.base.models.res_device: User 2 inserts device log (Vw_SnCHvHtKQZskjR-1FxPKIbNr7345pynG9h-4xNR) 
+2026-11-12 11:00:04,766 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "GET /odoo HTTP/1.1" 200 - 12 0.003 0.014
+2026-11-12 11:00:04,798 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "GET /web/webclient/load_menus HTTP/1.1" 200 - 10 0.005 0.018
+2026-11-12 11:00:04,803 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 5 0.004 0.006
+2026-11-12 11:00:04,843 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 3 0.000 0.007
+2026-11-12 11:00:04,860 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "POST /web/action/load HTTP/1.1" 200 - 9 0.007 0.008
+2026-11-12 11:00:04,872 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 15 0.013 0.015
+2026-11-12 11:00:04,881 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 3 0.009 0.009
+2026-11-12 11:00:04,881 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 9 0.010 0.012
+2026-11-12 11:00:04,899 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:04] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.000 0.006
+2026-11-12 11:00:13,515 13660 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:00:13] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.000 0.003
+2026-11-12 11:00:38,892 22936 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:00:38,893 22936 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:00:38,893 22936 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:00:38,893 22936 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:00:39,077 22936 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:00:39,352 22936 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:00:39,355 22936 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:00:39,374 22936 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:00:39,374 22936 INFO Test odoo.modules.loading: updating modules list 
+2026-11-12 11:00:39,377 22936 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-11-12 11:00:39,516 22936 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:00:40,060 22936 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:00:40,061 22936 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:00:40,399 22936 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:00:40,399 22936 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:00:40,533 22936 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:00:40,984 22936 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:00:41,293 22936 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-11-12 11:00:41,570 22936 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:00:41,570 22936 INFO Test odoo.modules.loading: Loading module library_rental (2/15) 
+2026-11-12 11:00:41,579 22936 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1677, in start
+    rc = server.run(preload, stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 714, in run
+    rc = preload_registries(preload)
+  File "C:\Odoo\server\odoo\service\server.py", line 1591, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:00:41,583 22936 INFO Test odoo.registry: module library_rental: creating or updating database tables 
+2026-11-12 11:00:41,660 22936 INFO Test odoo.modules.loading: loading library_rental/security/library_security.xml 
+2026-11-12 11:00:41,673 22936 INFO Test odoo.modules.loading: loading library_rental/security/ir.model.access.csv 
+2026-11-12 11:00:41,683 22936 INFO Test odoo.modules.loading: loading library_rental/views/book_views.xml 
+2026-11-12 11:00:41,763 22936 INFO Test odoo.addons.base.models.ir_module: module library_rental: no translation for language uk_UA 
+2026-11-12 11:00:41,769 22936 INFO Test odoo.modules.loading: Module library_rental loaded in 0.20s, 241 queries (+241 other) 
+2026-11-12 11:00:42,011 22936 INFO Test odoo.modules.loading: 15 modules loaded in 0.44s, 241 queries (+241 extra) 
+2026-11-12 11:00:42,112 22936 INFO Test odoo.registry: verifying fields for every extended model 
+2026-11-12 11:00:42,258 22936 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:00:42,261 22936 INFO Test odoo.registry: Registry changed, signaling through the database 
+2026-11-12 11:00:42,262 22936 INFO Test odoo.registry: Registry loaded in 2.971s 
+2026-11-12 11:00:42,262 22936 INFO Test odoo.service.server: Initiating shutdown 
+2026-11-12 11:00:42,262 22936 INFO Test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:00:42,263 22936 INFO Test odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-11-12 11:00:47,680 19172 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:00:47,680 19172 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:00:47,680 19172 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:00:47,681 19172 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:00:47,825 19172 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:00:48,058 19172 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:00:48,059 19172 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:00:48,234 19172 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:00:48,237 19172 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:00:48,241 19172 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:00:48,243 19172 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:00:48,250 19172 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:00:48,471 19172 INFO Test odoo.modules.loading: 15 modules loaded in 0.23s, 0 queries (+0 extra) 
+2026-11-12 11:00:48,498 19172 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:00:48,499 19172 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:00:48,511 19172 INFO Test odoo.registry: Registry loaded in 0.447s 
+2026-11-12 11:01:27,073 22772 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:01:27,074 22772 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:01:27,074 22772 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:01:27,074 22772 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:01:27,262 22772 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:01:27,535 22772 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:01:27,538 22772 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:01:27,557 22772 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:01:27,557 22772 INFO Test odoo.modules.loading: updating modules list 
+2026-11-12 11:01:27,560 22772 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-11-12 11:01:27,689 22772 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:01:28,159 22772 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:01:28,160 22772 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:01:28,491 22772 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:01:28,491 22772 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:01:28,607 22772 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:01:28,977 22772 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:01:29,259 22772 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-11-12 11:01:29,498 22772 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:01:29,498 22772 INFO Test odoo.modules.loading: Loading module library_rental (2/15) 
+2026-11-12 11:01:29,505 22772 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1677, in start
+    rc = server.run(preload, stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 714, in run
+    rc = preload_registries(preload)
+  File "C:\Odoo\server\odoo\service\server.py", line 1591, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:01:29,508 22772 INFO Test odoo.registry: module library_rental: creating or updating database tables 
+2026-11-12 11:01:29,564 22772 INFO Test odoo.modules.loading: loading library_rental/security/library_security.xml 
+2026-11-12 11:01:29,574 22772 INFO Test odoo.modules.loading: loading library_rental/security/ir.model.access.csv 
+2026-11-12 11:01:29,587 22772 INFO Test odoo.modules.loading: loading library_rental/views/book_views.xml 
+2026-11-12 11:01:29,655 22772 INFO Test odoo.addons.base.models.ir_module: module library_rental: no translation for language uk_UA 
+2026-11-12 11:01:29,660 22772 INFO Test odoo.modules.loading: Module library_rental loaded in 0.16s, 233 queries (+233 other) 
+2026-11-12 11:01:29,850 22772 INFO Test odoo.modules.loading: 15 modules loaded in 0.35s, 233 queries (+233 extra) 
+2026-11-12 11:01:29,931 22772 INFO Test odoo.registry: verifying fields for every extended model 
+2026-11-12 11:01:30,055 22772 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:01:30,059 22772 INFO Test odoo.registry: Registry changed, signaling through the database 
+2026-11-12 11:01:30,060 22772 INFO Test odoo.registry: Registry loaded in 2.587s 
+2026-11-12 11:01:30,060 22772 INFO Test odoo.service.server: Initiating shutdown 
+2026-11-12 11:01:30,060 22772 INFO Test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:01:30,060 22772 INFO Test odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-11-12 11:01:34,682 5484 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:01:34,683 5484 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:01:34,683 5484 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:01:34,683 5484 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:01:34,825 5484 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:01:35,033 5484 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:01:35,033 5484 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:01:35,096 5484 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:01:35,099 5484 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:01:35,102 5484 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:01:35,103 5484 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:01:35,109 5484 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:01:35,301 5484 INFO Test odoo.modules.loading: 15 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-11-12 11:01:35,325 5484 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:01:35,327 5484 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:01:35,337 5484 INFO Test odoo.registry: Registry loaded in 0.299s 
+2026-11-12 11:02:01,859 19644 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:02:01,859 19644 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:02:01,859 19644 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:02:01,859 19644 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:02:02,062 19644 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:02:02,340 19644 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:02:02,343 19644 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:02:02,363 19644 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:02:02,363 19644 INFO Test odoo.modules.loading: updating modules list 
+2026-11-12 11:02:02,366 19644 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-11-12 11:02:02,501 19644 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:02:02,967 19644 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:02,968 19644 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:03,310 19644 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:02:03,310 19644 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:02:03,426 19644 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:02:03,800 19644 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:04,142 19644 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-11-12 11:02:04,399 19644 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:02:04,399 19644 INFO Test odoo.modules.loading: Loading module library_rental (2/15) 
+2026-11-12 11:02:04,408 19644 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1677, in start
+    rc = server.run(preload, stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 714, in run
+    rc = preload_registries(preload)
+  File "C:\Odoo\server\odoo\service\server.py", line 1591, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:02:04,412 19644 INFO Test odoo.registry: module library_rental: creating or updating database tables 
+2026-11-12 11:02:04,481 19644 INFO Test odoo.modules.loading: loading library_rental/security/library_security.xml 
+2026-11-12 11:02:04,512 19644 INFO Test odoo.modules.loading: loading library_rental/security/ir.model.access.csv 
+2026-11-12 11:02:04,525 19644 INFO Test odoo.modules.loading: loading library_rental/views/book_views.xml 
+2026-11-12 11:02:04,599 19644 INFO Test odoo.addons.base.models.ir_module: module library_rental: no translation for language uk_UA 
+2026-11-12 11:02:04,604 19644 INFO Test odoo.modules.loading: Module library_rental loaded in 0.20s, 243 queries (+243 other) 
+2026-11-12 11:02:04,831 19644 INFO Test odoo.modules.loading: 15 modules loaded in 0.43s, 243 queries (+243 extra) 
+2026-11-12 11:02:04,924 19644 INFO Test odoo.registry: verifying fields for every extended model 
+2026-11-12 11:02:05,078 19644 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:02:05,084 19644 INFO Test odoo.registry: Registry changed, signaling through the database 
+2026-11-12 11:02:05,085 19644 INFO Test odoo.registry: Registry loaded in 2.808s 
+2026-11-12 11:02:05,085 19644 INFO Test odoo.service.server: Initiating shutdown 
+2026-11-12 11:02:05,085 19644 INFO Test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:02:05,085 19644 INFO Test odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-11-12 11:02:08,380 5576 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:02:08,380 5576 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:02:08,380 5576 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:02:08,380 5576 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:02:08,548 5576 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:02:08,814 5576 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:02:08,814 5576 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:02:08,887 5576 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:02:08,890 5576 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:02:08,894 5576 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:08,895 5576 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:02:08,902 5576 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:02:09,130 5576 INFO Test odoo.modules.loading: 15 modules loaded in 0.23s, 0 queries (+0 extra) 
+2026-11-12 11:02:09,162 5576 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:02:09,163 5576 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:02:09,177 5576 INFO Test odoo.registry: Registry loaded in 0.357s 
+2026-11-12 11:02:21,576 13660 INFO Test odoo.registry: Reloading the model registry after database signaling. 
+2026-11-12 11:02:21,590 13660 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:02:21,594 13660 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:02:21,594 13660 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:02:21,598 13660 INFO Test odoo.modules.loading: 15 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:02:21,625 13660 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:02:21,632 13660 INFO Test odoo.registry: Registry loaded in 0.056s 
+2026-11-12 11:02:21,633 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-11-12 11:02:21,683 13660 INFO Test odoo.addons.base.models.res_users: GC'd 1 user log entries 
+2026-11-12 11:02:21,695 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:02:21,702 13660 INFO Test odoo.addons.base.models.ir_attachment: filestore gc 1 checked, 0 removed 
+2026-11-12 11:02:21,708 13660 INFO Test odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-11-12 11:02:21,715 13660 INFO Test odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-11-12 11:02:21,739 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:02:21,744 13660 INFO Test odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-11-12 11:02:21,746 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.11s) 
+2026-11-12 11:02:40,648 5832 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:02:40,649 5832 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:02:40,649 5832 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:02:40,649 5832 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:02:40,951 5832 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:02:41,232 5832 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:02:41,234 5832 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:02:41,253 5832 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:02:41,253 5832 INFO Test odoo.modules.loading: updating modules list 
+2026-11-12 11:02:41,256 5832 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-11-12 11:02:41,382 5832 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:02:41,856 5832 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:41,858 5832 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:42,199 5832 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:02:42,199 5832 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:02:42,319 5832 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:02:42,695 5832 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:42,993 5832 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-11-12 11:02:43,232 5832 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:02:43,232 5832 INFO Test odoo.modules.loading: Loading module library_rental (2/15) 
+2026-11-12 11:02:43,239 5832 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1677, in start
+    rc = server.run(preload, stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 714, in run
+    rc = preload_registries(preload)
+  File "C:\Odoo\server\odoo\service\server.py", line 1591, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:02:43,242 5832 INFO Test odoo.registry: module library_rental: creating or updating database tables 
+2026-11-12 11:02:43,298 5832 INFO Test odoo.modules.loading: loading library_rental/security/library_security.xml 
+2026-11-12 11:02:43,317 5832 INFO Test odoo.modules.loading: loading library_rental/security/ir.model.access.csv 
+2026-11-12 11:02:43,327 5832 INFO Test odoo.modules.loading: loading library_rental/views/book_views.xml 
+2026-11-12 11:02:43,406 5832 INFO Test odoo.addons.base.models.ir_module: module library_rental: no translation for language uk_UA 
+2026-11-12 11:02:43,410 5832 INFO Test odoo.modules.loading: Module library_rental loaded in 0.18s, 263 queries (+263 other) 
+2026-11-12 11:02:43,618 5832 INFO Test odoo.modules.loading: 15 modules loaded in 0.39s, 263 queries (+263 extra) 
+2026-11-12 11:02:43,701 5832 INFO Test odoo.registry: verifying fields for every extended model 
+2026-11-12 11:02:43,827 5832 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:02:43,831 5832 INFO Test odoo.registry: Registry changed, signaling through the database 
+2026-11-12 11:02:43,832 5832 INFO Test odoo.registry: Registry loaded in 2.660s 
+2026-11-12 11:02:43,832 5832 INFO Test odoo.service.server: Initiating shutdown 
+2026-11-12 11:02:43,832 5832 INFO Test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:02:43,832 5832 INFO Test odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-11-12 11:02:47,502 21896 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:02:47,503 21896 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:02:47,503 21896 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:02:47,503 21896 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:02:47,645 21896 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:02:47,856 21896 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:02:47,856 21896 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:02:47,924 21896 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:02:47,927 21896 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:02:47,931 21896 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:47,932 21896 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:02:47,938 21896 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:02:48,128 21896 INFO Test odoo.modules.loading: 15 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-11-12 11:02:48,153 21896 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:02:48,154 21896 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:02:48,166 21896 INFO Test odoo.registry: Registry loaded in 0.304s 
+2026-11-12 11:02:52,574 6208 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:02:52,575 6208 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:02:52,575 6208 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:02:52,575 6208 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:02:52,717 6208 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:02:52,939 6208 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:02:52,940 6208 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:02:53,003 6208 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:02:53,006 6208 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:02:53,009 6208 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:53,010 6208 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:02:53,016 6208 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:02:53,209 6208 INFO Test odoo.modules.loading: 15 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-11-12 11:02:53,235 6208 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:02:53,236 6208 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:02:53,247 6208 INFO Test odoo.registry: Registry loaded in 0.303s 
+2026-11-12 11:02:56,774 13964 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:02:56,774 13964 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:02:56,774 13964 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:02:56,774 13964 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:02:56,916 13964 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:02:57,131 13964 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:02:57,132 13964 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:02:57,198 13964 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:02:57,201 13964 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:02:57,205 13964 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:02:57,206 13964 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:02:57,212 13964 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:02:57,403 13964 INFO Test odoo.modules.loading: 15 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-11-12 11:02:57,429 13964 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:02:57,430 13964 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:02:57,442 13964 INFO Test odoo.registry: Registry loaded in 0.305s 
+2026-11-12 11:03:21,907 13660 INFO Test odoo.registry: Reloading the model registry after database signaling. 
+2026-11-12 11:03:21,911 13660 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:03:21,917 13660 INFO Test odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-11-12 11:03:21,917 13660 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:03:21,920 13660 INFO Test odoo.modules.loading: 15 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:03:21,940 13660 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:03:21,944 13660 INFO Test odoo.registry: Registry loaded in 0.036s 
+2026-11-12 11:03:21,945 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-11-12 11:03:21,994 13660 INFO Test odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-11-12 11:03:22,009 13660 INFO Test odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-11-12 11:03:22,011 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:03:22,012 13660 INFO Test odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-11-12 11:03:22,016 13660 INFO Test odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-11-12 11:03:22,022 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:03:22,026 13660 INFO Test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-11-12 11:03:22,032 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.09s) 
+2026-11-12 11:03:50,879 14040 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:03:50,880 14040 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:03:50,880 14040 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:03:50,880 14040 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:03:51,065 14040 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:03:51,333 14040 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:03:51,335 14040 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:03:51,354 14040 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:03:51,354 14040 INFO Test odoo.modules.loading: updating modules list 
+2026-11-12 11:03:51,357 14040 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-11-12 11:03:51,478 14040 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:03:51,937 14040 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:03:51,939 14040 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:03:52,280 14040 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:03:52,280 14040 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:03:52,394 14040 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:03:52,763 14040 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:03:53,043 14040 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-11-12 11:03:53,284 14040 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:03:53,284 14040 INFO Test odoo.modules.loading: Loading module library_rental (2/15) 
+2026-11-12 11:03:53,292 14040 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1677, in start
+    rc = server.run(preload, stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 714, in run
+    rc = preload_registries(preload)
+  File "C:\Odoo\server\odoo\service\server.py", line 1591, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:03:53,295 14040 INFO Test odoo.registry: module library_rental: creating or updating database tables 
+2026-11-12 11:03:53,352 14040 INFO Test odoo.modules.loading: loading library_rental/security/library_security.xml 
+2026-11-12 11:03:53,370 14040 INFO Test odoo.modules.loading: loading library_rental/security/ir.model.access.csv 
+2026-11-12 11:03:53,380 14040 INFO Test odoo.modules.loading: loading library_rental/views/book_views.xml 
+2026-11-12 11:03:53,458 14040 INFO Test odoo.addons.base.models.ir_module: module library_rental: no translation for language uk_UA 
+2026-11-12 11:03:53,464 14040 INFO Test odoo.modules.loading: Module library_rental loaded in 0.18s, 255 queries (+255 other) 
+2026-11-12 11:03:53,661 14040 INFO Test odoo.modules.loading: 15 modules loaded in 0.38s, 255 queries (+255 extra) 
+2026-11-12 11:03:53,745 14040 INFO Test odoo.registry: verifying fields for every extended model 
+2026-11-12 11:03:53,866 14040 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:03:53,870 14040 INFO Test odoo.registry: Registry changed, signaling through the database 
+2026-11-12 11:03:53,870 14040 INFO Test odoo.registry: Registry loaded in 2.598s 
+2026-11-12 11:03:53,871 14040 INFO Test odoo.service.server: Initiating shutdown 
+2026-11-12 11:03:53,871 14040 INFO Test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:03:53,871 14040 INFO Test odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-11-12 11:03:59,402 12076 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:03:59,402 12076 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:03:59,402 12076 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:03:59,402 12076 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:03:59,543 12076 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:03:59,751 12076 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:03:59,751 12076 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:03:59,815 12076 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:03:59,818 12076 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:03:59,821 12076 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:03:59,822 12076 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:03:59,828 12076 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:04:00,020 12076 INFO Test odoo.modules.loading: 15 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-11-12 11:04:00,045 12076 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:04:00,047 12076 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:04:00,057 12076 INFO Test odoo.registry: Registry loaded in 0.301s 
+2026-11-12 11:04:22,088 13660 INFO Test odoo.registry: Reloading the model registry after database signaling. 
+2026-11-12 11:04:22,092 13660 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:04:22,094 13660 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:04:22,095 13660 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:04:22,098 13660 INFO Test odoo.modules.loading: 15 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:04:22,120 13660 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:04:22,123 13660 INFO Test odoo.registry: Registry loaded in 0.035s 
+2026-11-12 11:04:22,124 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-11-12 11:04:22,173 13660 INFO Test odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-11-12 11:04:22,176 13660 INFO Test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-11-12 11:04:22,183 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:04:22,198 13660 INFO Test odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-11-12 11:04:22,200 13660 INFO Test odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-11-12 11:04:22,211 13660 INFO Test odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-11-12 11:04:22,213 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:04:22,216 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.09s) 
+2026-11-12 11:04:31,164 3136 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:04:31,164 3136 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:04:31,164 3136 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:04:31,164 3136 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:04:31,304 3136 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:04:31,516 3136 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:04:31,516 3136 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:04:31,583 3136 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:04:31,586 3136 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:04:31,589 3136 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:04:31,590 3136 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:04:31,596 3136 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:04:31,791 3136 INFO Test odoo.modules.loading: 15 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-11-12 11:04:31,816 3136 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:04:31,817 3136 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:04:31,828 3136 INFO Test odoo.registry: Registry loaded in 0.308s 
+2026-11-12 11:04:40,057 13828 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:04:40,057 13828 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:04:40,057 13828 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:04:40,057 13828 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:04:40,198 13828 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:04:40,411 13828 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:04:40,411 13828 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:04:40,474 13828 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:04:40,476 13828 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:04:40,480 13828 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:04:40,481 13828 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:04:40,487 13828 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:04:40,680 13828 INFO Test odoo.modules.loading: 15 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-11-12 11:04:40,704 13828 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:04:40,705 13828 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:04:40,716 13828 INFO Test odoo.registry: Registry loaded in 0.301s 
+2026-11-12 11:04:41,585 13828 INFO Test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: read on record ids: [60], uid: 6, model: library.loan 
+2026-11-12 11:04:41,831 13828 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: create, uid: 6, model: library.book 
+2026-11-12 11:04:41,833 13828 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: write, uid: 6, model: library.book 
+2026-11-12 11:04:41,833 13828 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: unlink, uid: 6, model: library.book 
+2026-11-12 11:04:41,834 13828 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 6, model: library.member 
+2026-11-12 11:04:41,835 13828 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: write, uid: 6, model: library.loan 
+2026-11-12 11:04:41,835 13828 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: create, uid: 6, model: library.loan 
+2026-11-12 11:04:41,836 13828 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: unlink, uid: 6, model: library.loan 
+2026-11-12 11:04:48,362 3452 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:04:48,363 3452 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:04:48,363 3452 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:04:48,363 3452 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:04:48,506 3452 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:04:48,736 3452 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:04:48,736 3452 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:04:48,799 3452 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:04:48,802 3452 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:04:48,805 3452 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:04:48,806 3452 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:04:48,813 3452 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:04:49,024 3452 INFO Test odoo.modules.loading: 15 modules loaded in 0.22s, 0 queries (+0 extra) 
+2026-11-12 11:04:49,052 3452 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:04:49,054 3452 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:04:49,070 3452 INFO Test odoo.registry: Registry loaded in 0.330s 
+2026-11-12 11:04:49,964 3452 INFO Test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: read on record ids: [62], uid: 8, model: library.loan 
+2026-11-12 11:04:50,212 3452 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 8, model: library.member 
+2026-11-12 11:04:50,214 3452 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: write, uid: 8, model: library.book 
+2026-11-12 11:04:50,215 3452 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: write, uid: 8, model: library.loan 
+2026-11-12 11:04:50,216 3452 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: create, uid: 8, model: library.loan 
+2026-11-12 11:04:50,216 3452 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: unlink, uid: 8, model: library.loan 
+2026-11-12 11:04:58,648 6308 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:04:58,648 6308 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:04:58,648 6308 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:04:58,648 6308 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:04:58,792 6308 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 154, in run
+    self.init(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 76, in init
+    server.start(preload=[], stop=True)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:04:59,010 6308 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:04:59,010 6308 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:04:59,077 6308 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:04:59,080 6308 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:04:59,083 6308 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:04:59,084 6308 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:04:59,090 6308 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\shell.py", line 162, in run
+    self.shell(dbnames[0])
+  File "C:\Odoo\server\odoo\cli\shell.py", line 137, in shell
+    registry = Registry(dbname)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:04:59,285 6308 INFO Test odoo.modules.loading: 15 modules loaded in 0.20s, 0 queries (+0 extra) 
+2026-11-12 11:04:59,310 6308 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:04:59,311 6308 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:04:59,322 6308 INFO Test odoo.registry: Registry loaded in 0.308s 
+2026-11-12 11:05:00,206 6308 INFO Test odoo.addons.base.models.ir_rule: Access Denied by record rules for operation: read on record ids: [64], uid: 10, model: library.loan 
+2026-11-12 11:05:00,457 6308 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 10, model: library.member 
+2026-11-12 11:05:00,458 6308 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: create, uid: 10, model: library.book 
+2026-11-12 11:05:00,459 6308 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: write, uid: 10, model: library.book 
+2026-11-12 11:05:00,460 6308 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: unlink, uid: 10, model: library.book 
+2026-11-12 11:05:00,461 6308 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: write, uid: 10, model: library.loan 
+2026-11-12 11:05:00,461 6308 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: create, uid: 10, model: library.loan 
+2026-11-12 11:05:00,462 6308 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: unlink, uid: 10, model: library.loan 
+2026-11-12 11:05:22,285 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-11-12 11:05:22,336 13660 INFO Test odoo.addons.base.models.ir_attachment: filestore gc 6 checked, 6 removed 
+2026-11-12 11:05:22,352 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:05:22,354 13660 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:05:22,364 13660 INFO Test odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-11-12 11:05:22,367 13660 INFO Test odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-11-12 11:05:22,379 13660 INFO Test odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-11-12 11:05:22,392 13660 INFO Test odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-11-12 11:05:22,394 13660 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.11s) 
+2026-11-12 11:05:37,541 21908 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:05:37,541 21908 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:05:37,541 21908 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', '__editable__.odoo-19.0.post20261026.finder.__path_hook__', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:05:37,541 21908 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:05:37,726 21908 WARNING ? py.warnings: C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py:21: DeprecationWarning: PyPDF2 is deprecated. Please move to the pypdf library instead.
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1627, in start
+    load_server_wide_modules()
+  File "C:\Odoo\server\odoo\service\server.py", line 1522, in load_server_wide_modules
+    load_openerp_module(m)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "C:\Odoo\server\odoo\addons\base\__init__.py", line 4, in <module>
+    from . import models
+  File "C:\Odoo\server\odoo\addons\base\models\__init__.py", line 12, in <module>
+    from . import ir_actions_report
+  File "C:\Odoo\server\odoo\addons\base\models\ir_actions_report.py", line 33, in <module>
+    from odoo.tools.pdf import PdfFileReader, PdfFileWriter, PdfReadError
+  File "C:\Odoo\server\odoo\tools\pdf\__init__.py", line 33, in <module>
+    import PyPDF2.filters  # needed after PyPDF2 2.0.0 and before 2.11.0
+  File "C:\Users\WellDone\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\PyPDF2\__init__.py", line 21, in <module>
+    warnings.warn(
+ 
+2026-11-12 11:05:37,999 21908 INFO Test odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:05:38,002 21908 INFO Test odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:05:38,020 21908 INFO Test odoo.tools.version_tag_reset: Detected tp_versions_used at offset 410, reset enabled 
+2026-11-12 11:05:38,021 21908 INFO Test odoo.modules.loading: updating modules list 
+2026-11-12 11:05:38,024 21908 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-11-12 11:05:38,150 21908 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:05:38,643 21908 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:05:38,644 21908 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:05:38,980 21908 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:05:38,980 21908 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Бібліотека'] to user __system__ #1 via n/a 
+2026-11-12 11:05:39,093 21908 WARNING Test odoo.modules.module: addons path is not a directory: __editable__.odoo-19.0.post20261026.finder.__path_hook__ 
+2026-11-12 11:05:39,466 21908 WARNING Test odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:05:39,749 21908 INFO Test odoo.addons.base.models.ir_module: ALLOW access to module.button_install on [] to user __system__ #1 via n/a 
+2026-11-12 11:05:40,004 21908 INFO Test odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:05:40,005 21908 INFO Test odoo.modules.loading: Loading module library_rental (2/15) 
+2026-11-12 11:05:40,012 21908 WARNING Test py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Odoo\server\odoo-bin", line 6, in <module>
+    odoo.cli.main()
+  File "C:\Odoo\server\odoo\cli\command.py", line 133, in main
+    command().run(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 127, in run
+    main(args)
+  File "C:\Odoo\server\odoo\cli\server.py", line 118, in main
+    rc = server.start(preload=config['db_name'], stop=stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 1677, in start
+    rc = server.run(preload, stop)
+  File "C:\Odoo\server\odoo\service\server.py", line 714, in run
+    rc = preload_registries(preload)
+  File "C:\Odoo\server\odoo\service\server.py", line 1591, in preload_registries
+    registry = Registry.new(dbname, update_module=update_module, install_modules=config['init'], upgrade_modules=config['update'], reinit_modules=config['reinit'])
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:05:40,015 21908 INFO Test odoo.registry: module library_rental: creating or updating database tables 
+2026-11-12 11:05:40,077 21908 INFO Test odoo.modules.loading: loading library_rental/security/library_security.xml 
+2026-11-12 11:05:40,098 21908 INFO Test odoo.modules.loading: loading library_rental/security/ir.model.access.csv 
+2026-11-12 11:05:40,108 21908 INFO Test odoo.modules.loading: loading library_rental/views/book_views.xml 
+2026-11-12 11:05:40,194 21908 INFO Test odoo.addons.base.models.ir_module: module library_rental: no translation for language uk_UA 
+2026-11-12 11:05:40,198 21908 INFO Test odoo.modules.loading: Module library_rental loaded in 0.19s, 255 queries (+255 other) 
+2026-11-12 11:05:40,391 21908 INFO Test odoo.modules.loading: 15 modules loaded in 0.39s, 255 queries (+255 extra) 
+2026-11-12 11:05:40,470 21908 INFO Test odoo.registry: verifying fields for every extended model 
+2026-11-12 11:05:40,594 21908 INFO Test odoo.modules.loading: Modules loaded. 
+2026-11-12 11:05:40,598 21908 INFO Test odoo.registry: Registry changed, signaling through the database 
+2026-11-12 11:05:40,599 21908 INFO Test odoo.registry: Registry loaded in 2.662s 
+2026-11-12 11:05:40,599 21908 INFO Test odoo.service.server: Initiating shutdown 
+2026-11-12 11:05:40,599 21908 INFO Test odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:05:40,599 21908 INFO Test odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  
+2026-11-12 11:06:59,347 13660 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:06:59,347 13660 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:06:59,784 13660 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-11-12 11:06:59,784 13660 INFO ? odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 8 connections  
+2026-11-12 11:06:59,794 13660 INFO ? odoo.service.server: cron1 max age (0s) reached, releasing connection. 
+2026-11-12 11:07:00,712 19324 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-12 11:07:00,713 19324 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-12 11:07:00,713 19324 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-12 11:07:00,713 19324 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-12 11:07:02,531 19324 INFO ? odoo.service.server: HTTP service (werkzeug) running on Asta:8069 
+2026-11-12 11:07:03,413 19324 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-11-12 11:07:03,416 19324 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-12 11:07:03,419 19324 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-12 11:07:03,421 19324 INFO ? odoo.modules.loading: loading 15 modules... 
+2026-11-12 11:07:03,434 19324 WARNING ? py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Odoo\server\odoo\service\server.py", line 132, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 363, in handle
+    super().handle()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Odoo\server\odoo\http.py", line 2852, in __call__
+    response = request._serve_db()
+  File "C:\Odoo\server\odoo\http.py", line 2275, in _serve_db
+    registry = Registry(self.db)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-12 11:07:03,783 19324 INFO ? odoo.modules.loading: 15 modules loaded in 0.36s, 0 queries (+0 extra) 
+2026-11-12 11:07:03,820 19324 INFO ? odoo.modules.loading: Modules loaded. 
+2026-11-12 11:07:03,833 19324 INFO ? odoo.registry: Registry loaded in 0.590s 
+2026-11-12 11:07:03,834 19324 INFO Test odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-11-12 11:07:04,493 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:04] "GET /odoo/action-90 HTTP/1.1" 200 - 85 0.077 1.177
+2026-11-12 11:07:04,587 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:04] "GET /web/assets/b4a6256/web.assets_web.min.js HTTP/1.1" 200 - 3 0.003 0.083
+2026-11-12 11:07:04,588 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:04] "GET /web/assets/3028c63/web.assets_web.min.css HTTP/1.1" 200 - 3 0.011 0.073
+2026-11-12 11:07:04,605 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:04] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 11 0.012 0.080
+2026-11-12 11:07:04,613 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:04] "GET /web/webclient/load_menus HTTP/1.1" 200 - 7 0.020 0.089
+2026-11-12 11:07:04,638 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:04] "GET /web/assets/557c713/web.assets_web_print.min.css HTTP/1.1" 200 - 3 0.002 0.004
+2026-11-12 11:07:04,787 19324 INFO ? werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:04] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.002
+2026-11-12 11:07:06,311 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:06] "GET /web/webclient/translations?hash=&lang=uk_UA HTTP/1.1" 200 - 2 0.002 1.023
+2026-11-12 11:07:06,327 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:06] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 4 0.005 0.003
+2026-11-12 11:07:06,364 19324 INFO ? werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:06] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 0 0.000 0.013
+2026-11-12 11:07:06,370 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:06] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 15 0.014 0.014
+2026-11-12 11:07:06,375 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:06] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.002 0.011
+2026-11-12 11:07:06,422 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:06] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 29 0.047 0.025
+2026-11-12 11:07:06,438 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:06] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 3 0.003 0.004
+2026-11-12 11:07:06,452 19324 INFO ? werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:06] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.003
+2026-11-12 11:07:06,692 19324 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-11-12 11:07:08,055 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:08] "POST /web/action/load HTTP/1.1" 200 - 9 0.015 0.006
+2026-11-12 11:07:08,090 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:08] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 19 0.010 0.019
+2026-11-12 11:07:08,106 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:08] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 5 0.008 0.003
+2026-11-12 11:07:12,015 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:12] "POST /web/action/load HTTP/1.1" 200 - 9 0.001 0.009
+2026-11-12 11:07:12,041 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:12] "POST /web/dataset/call_kw/res.config.settings/get_views#res.config.settings.get_views HTTP/1.1" 200 - 9 0.002 0.018
+2026-11-12 11:07:12,080 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:12] "POST /web/dataset/call_kw/res.config.settings/onchange#res.config.settings.onchange HTTP/1.1" 200 - 31 0.009 0.023
+2026-11-12 11:07:12,105 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:12] "POST /base_setup/demo_active HTTP/1.1" 200 - 2 0.001 0.005
+2026-11-12 11:07:12,114 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:12] "POST /base_setup/data HTTP/1.1" 200 - 6 0.006 0.002
+2026-11-12 11:07:13,334 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:13] "POST /web/dataset/call_kw/res.config.settings/web_save#res.config.settings.web_save HTTP/1.1" 200 - 18 0.008 0.010
+2026-11-12 11:07:13,354 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:13] "POST /web/action/load HTTP/1.1" 200 - 12 0.005 0.010
+2026-11-12 11:07:13,428 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:13] "POST /web/dataset/call_kw/res.users/get_views#res.users.get_views HTTP/1.1" 200 - 58 0.022 0.048
+2026-11-12 11:07:13,462 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:13] "POST /web/dataset/call_kw/res.users/web_search_read#res.users.web_search_read HTTP/1.1" 200 - 18 0.015 0.012
+2026-11-12 11:07:14,270 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:14] "POST /web/dataset/call_kw/res.users/web_read#res.users.web_read HTTP/1.1" 200 - 43 0.019 0.035
+2026-11-12 11:07:16,685 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:16] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 17 0.006 0.018
+2026-11-12 11:07:21,056 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:21] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 4 0.000 0.009
+2026-11-12 11:07:29,840 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:29] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 4 0.001 0.010
+2026-11-12 11:07:30,410 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:30] "POST /web/dataset/call_kw/res.users/onchange#res.users.onchange HTTP/1.1" 200 - 7 0.006 0.008
+2026-11-12 11:07:36,796 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:36] "POST /web/dataset/call_kw/res.users/web_save#res.users.web_save HTTP/1.1" 200 - 46 0.022 0.051
+2026-11-12 11:07:36,817 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:36] "GET /web/image/res.users/12/avatar_128 HTTP/1.1" 200 - 8 0.005 0.008
+2026-11-12 11:07:38,712 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:38] "POST /web/dataset/call_button/res.users/action_change_password_wizard#res.users.action_change_password_wizard HTTP/1.1" 200 - 1 0.000 0.004
+2026-11-12 11:07:38,738 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:38] "POST /web/dataset/call_kw/change.password.wizard/get_views#change.password.wizard.get_views HTTP/1.1" 200 - 17 0.006 0.013
+2026-11-12 11:07:38,750 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:38] "POST /web/dataset/call_kw/change.password.wizard/onchange#change.password.wizard.onchange HTTP/1.1" 200 - 5 0.004 0.004
+2026-11-12 11:07:46,252 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:46] "POST /web/dataset/call_kw/change.password.wizard/web_save#change.password.wizard.web_save HTTP/1.1" 200 - 12 0.008 0.011
+2026-11-12 11:07:46,267 19324 INFO Test odoo.addons.base.models.res_users: Password change for 'petr@gmail.com' (#12) by 'test@gmail.com' (#2) from 127.0.0.1 
+2026-11-12 11:07:46,956 19324 INFO Test odoo.registry: Caches invalidated, signaling through the database: ['default'] 
+2026-11-12 11:07:46,958 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:46] "POST /web/dataset/call_button/change.password.wizard/change_password_button#change.password.wizard.change_password_button HTTP/1.1" 200 - 20 0.005 0.697
+2026-11-12 11:07:47,013 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:47] "POST /web/dataset/call_kw/res.users/web_read#res.users.web_read HTTP/1.1" 200 - 42 0.017 0.031
+2026-11-12 11:07:49,750 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:49] "GET /web/session/logout HTTP/1.1" 303 - 1 0.000 0.007
+2026-11-12 11:07:49,762 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:49] "GET /odoo HTTP/1.1" 303 - 1 0.002 0.007
+2026-11-12 11:07:50,050 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:50] "GET /web/login?redirect=%2Fodoo%3F HTTP/1.1" 200 - 38 0.012 0.272
+2026-11-12 11:07:50,073 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:50] "GET /web/binary/company_logo HTTP/1.1" 304 - 2 0.008 0.006
+2026-11-12 11:07:50,136 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:50] "GET /web/webclient/translations?hash=&lang= HTTP/1.1" 200 - 2 0.000 0.034
+2026-11-12 11:07:54,274 19324 INFO Test odoo.addons.base.models.res_users: Login successful for login:petr@gmail.com from 127.0.0.1 
+2026-11-12 11:07:54,281 19324 INFO Test odoo.registry: Caches invalidated, signaling through the database: ['default'] 
+2026-11-12 11:07:54,282 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "POST /web/login HTTP/1.1" 303 - 21 0.007 0.752
+2026-11-12 11:07:54,293 19324 INFO Test odoo.addons.base.models.res_device: User 12 inserts device log (DTbzWrb8U19ex7HmlBB1kzGtZBoZWrJYD0BXq8mr5K) 
+2026-11-12 11:07:54,300 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "GET /odoo HTTP/1.1" 200 - 10 0.002 0.014
+2026-11-12 11:07:54,326 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "GET /web/webclient/load_menus HTTP/1.1" 200 - 12 0.006 0.009
+2026-11-12 11:07:54,328 19324 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 12, model: ir.module.module 
+2026-11-12 11:07:54,603 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "GET /web/webclient/translations?hash=2b6b5e856eafa8f36a62db36518c37552f19d65b&lang=uk_UA HTTP/1.1" 200 - 1 0.000 0.107
+2026-11-12 11:07:54,651 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 3 0.012 0.096
+2026-11-12 11:07:54,654 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "POST /web/action/load HTTP/1.1" 200 - 9 0.002 0.053
+2026-11-12 11:07:54,727 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.001 0.063
+2026-11-12 11:07:54,728 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "GET /web/image/res.partner/13/avatar_128?unique=1794474473000 HTTP/1.1" 200 - 14 0.048 0.074
+2026-11-12 11:07:54,739 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "GET /web/image?model=res.users&field=avatar_128&id=12 HTTP/1.1" 200 - 15 0.068 0.069
+2026-11-12 11:07:54,792 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 10 0.039 0.079
+2026-11-12 11:07:54,855 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 3 0.046 0.008
+2026-11-12 11:07:54,858 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:54] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 4 0.003 0.531
+2026-11-12 11:07:57,654 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:57] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.006
+2026-11-12 11:07:57,670 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:57] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 3 0.001 0.008
+2026-11-12 11:07:57,682 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:57] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 5 0.002 0.005
+2026-11-12 11:07:58,645 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:58] "POST /web/action/load HTTP/1.1" 200 - 9 0.004 0.006
+2026-11-12 11:07:58,668 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:58] "POST /web/dataset/call_kw/library.member/get_views#library.member.get_views HTTP/1.1" 200 - 15 0.005 0.014
+2026-11-12 11:07:58,676 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:07:58] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 3 0.003 0.002
+2026-11-12 11:08:01,316 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:01] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.007
+2026-11-12 11:08:01,337 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:01] "POST /web/dataset/call_kw/library.copy/get_views#library.copy.get_views HTTP/1.1" 200 - 10 0.007 0.007
+2026-11-12 11:08:01,348 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:01] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 4 0.005 0.003
+2026-11-12 11:08:02,636 19324 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-11-12 11:08:02,711 19324 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:08:02,727 19324 INFO Test odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-11-12 11:08:02,770 19324 INFO Test odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-11-12 11:08:02,770 19324 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:08:02,778 19324 INFO Test odoo.addons.base.models.ir_attachment: filestore gc 1 checked, 0 removed 
+2026-11-12 11:08:02,780 19324 INFO Test odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-11-12 11:08:02,782 19324 INFO Test odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-11-12 11:08:02,784 19324 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.16s) 
+2026-11-12 11:08:03,921 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:03] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.002 0.005
+2026-11-12 11:08:07,107 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:07] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 2 0.002 0.006
+2026-11-12 11:08:08,766 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:08] "POST /web/dataset/call_kw/library.member/web_name_search#library.member.web_name_search HTTP/1.1" 200 - 2 0.001 0.003
+2026-11-12 11:08:11,179 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:11] "POST /web/dataset/call_kw/library.copy/web_name_search#library.copy.web_name_search HTTP/1.1" 200 - 2 0.001 0.004
+2026-11-12 11:08:11,982 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:11] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 3 0.001 0.007
+2026-11-12 11:08:13,430 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:13] "POST /web/dataset/call_kw/library.member/web_name_search#library.member.web_name_search HTTP/1.1" 200 - 2 0.002 0.004
+2026-11-12 11:08:14,390 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:14] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 1 0.000 0.004
+2026-11-12 11:08:14,800 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:14] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.002
+2026-11-12 11:08:18,045 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:18] "POST /web/dataset/call_kw/library.member/web_name_search#library.member.web_name_search HTTP/1.1" 200 - 2 0.003 0.004
+2026-11-12 11:08:19,703 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:19] "POST /web/dataset/call_kw/library.loan/web_save#library.loan.web_save HTTP/1.1" 200 - 6 0.002 0.011
+2026-11-12 11:08:19,716 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:19] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.002 0.006
+2026-11-12 11:08:20,948 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:20] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.001 0.006
+2026-11-12 11:08:21,516 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:21] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.004 0.003
+2026-11-12 11:08:22,284 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:22] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.001 0.005
+2026-11-12 11:08:24,518 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:24] "POST /web/dataset/call_kw/library.member/onchange#library.member.onchange HTTP/1.1" 200 - 2 0.000 0.005
+2026-11-12 11:08:30,577 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:30] "POST /web/dataset/call_kw/res.users/web_name_search#res.users.web_name_search HTTP/1.1" 200 - 11 0.004 0.010
+2026-11-12 11:08:48,175 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:48] "POST /web/dataset/call_kw/library.member/web_save#library.member.web_save HTTP/1.1" 200 - 6 0.002 0.006
+2026-11-12 11:08:51,132 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:51] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.004 0.004
+2026-11-12 11:08:53,648 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:53] "POST /web/dataset/call_kw/library.loan/web_read#library.loan.web_read HTTP/1.1" 200 - 5 0.002 0.007
+2026-11-12 11:08:56,846 19324 INFO Test odoo.models.unlink: User #12 deleted library.loan records with IDs: [65] 
+2026-11-12 11:08:56,849 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:56] "POST /web/dataset/call_kw/library.loan/unlink#library.loan.unlink HTTP/1.1" 200 - 6 0.001 0.009
+2026-11-12 11:08:56,858 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:56] "POST /web/dataset/call_kw/library.loan/web_read#library.loan.web_read HTTP/1.1" 200 - 5 0.001 0.005
+2026-11-12 11:08:59,538 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:08:59] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.004 0.005
+2026-11-12 11:09:00,650 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:00] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 1 0.001 0.004
+2026-11-12 11:09:01,666 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:01] "POST /web/dataset/call_kw/library.copy/web_name_search#library.copy.web_name_search HTTP/1.1" 200 - 2 0.001 0.004
+2026-11-12 11:09:02,717 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:02] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 3 0.002 0.004
+2026-11-12 11:09:03,542 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:03] "POST /web/dataset/call_kw/library.member/web_name_search#library.member.web_name_search HTTP/1.1" 200 - 2 0.001 0.005
+2026-11-12 11:09:04,780 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:04] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 1 0.001 0.005
+2026-11-12 11:09:10,216 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:10] "POST /web/dataset/call_kw/library.loan/onchange#library.loan.onchange HTTP/1.1" 200 - 1 0.001 0.004
+2026-11-12 11:09:12,371 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:12] "POST /web/dataset/call_kw/library.loan/web_save#library.loan.web_save HTTP/1.1" 200 - 7 0.005 0.004
+2026-11-12 11:09:15,418 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:15] "GET /web/session/logout HTTP/1.1" 303 - 1 0.001 0.006
+2026-11-12 11:09:15,431 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:15] "GET /odoo HTTP/1.1" 303 - 1 0.000 0.010
+2026-11-12 11:09:15,487 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:15] "GET /web/login?redirect=%2Fodoo%3F HTTP/1.1" 200 - 5 0.008 0.045
+2026-11-12 11:09:15,501 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:15] "GET /web/binary/company_logo HTTP/1.1" 304 - 2 0.002 0.003
+2026-11-12 11:09:15,556 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:15] "GET /web/webclient/translations?hash=27d9fd3fe1d322ca33722daf6a06f5b8af341a95&lang= HTTP/1.1" 200 - 2 0.001 0.020
+2026-11-12 11:09:21,044 19324 INFO Test odoo.addons.base.models.res_users: Login successful for login:stepan@gmail.com from 127.0.0.1 
+2026-11-12 11:09:21,067 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "POST /web/login HTTP/1.1" 303 - 16 0.029 0.757
+2026-11-12 11:09:21,088 19324 INFO Test odoo.addons.base.models.res_device: User 5 inserts device log (yLBxG6wnBdFFzU61gOLzZ4Mgz3zV-MiPGN4ccNMG0g) 
+2026-11-12 11:09:21,101 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "GET /odoo HTTP/1.1" 200 - 10 0.004 0.018
+2026-11-12 11:09:21,129 19324 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 5, model: ir.module.module 
+2026-11-12 11:09:21,132 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 3 0.003 0.006
+2026-11-12 11:09:21,133 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "GET /web/webclient/load_menus HTTP/1.1" 200 - 10 0.004 0.020
+2026-11-12 11:09:21,180 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 3 0.003 0.003
+2026-11-12 11:09:21,204 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "POST /web/action/load HTTP/1.1" 200 - 9 0.004 0.014
+2026-11-12 11:09:21,210 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.001 0.007
+2026-11-12 11:09:21,221 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "GET /web/image?model=res.users&field=avatar_128&id=5 HTTP/1.1" 304 - 15 0.019 0.015
+2026-11-12 11:09:21,233 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 9 0.002 0.013
+2026-11-12 11:09:21,250 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:21] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 8 0.002 0.008
+2026-11-12 11:09:28,242 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:28] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.003 0.005
+2026-11-12 11:09:31,215 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:31] "POST /web/dataset/call_kw/library.loan/web_read#library.loan.web_read HTTP/1.1" 200 - 5 0.004 0.005
+2026-11-12 11:09:42,610 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:42] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.003 0.004
+2026-11-12 11:09:43,759 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:43] "POST /web/dataset/call_kw/library.loan/web_read#library.loan.web_read HTTP/1.1" 200 - 5 0.003 0.006
+2026-11-12 11:09:44,907 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:44] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.000 0.003
+2026-11-12 11:09:52,474 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:09:52] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.001 0.006
+2026-11-12 11:10:00,139 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:00] "POST /web/dataset/call_kw/library.loan/web_read#library.loan.web_read HTTP/1.1" 200 - 5 0.000 0.008
+2026-11-12 11:10:01,292 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:01] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.004 0.005
+2026-11-12 11:10:02,343 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:02] "GET /web/session/logout HTTP/1.1" 303 - 1 0.001 0.009
+2026-11-12 11:10:02,355 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:02] "GET /odoo HTTP/1.1" 303 - 1 0.001 0.008
+2026-11-12 11:10:02,410 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:02] "GET /web/login?redirect=%2Fodoo%3F HTTP/1.1" 200 - 4 0.005 0.047
+2026-11-12 11:10:02,421 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:02] "GET /web/binary/company_logo HTTP/1.1" 304 - 2 0.001 0.003
+2026-11-12 11:10:02,459 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:02] "GET /web/webclient/translations?hash=27d9fd3fe1d322ca33722daf6a06f5b8af341a95&lang= HTTP/1.1" 200 - 2 0.000 0.003
+2026-11-12 11:10:05,443 19324 INFO Test odoo.addons.base.models.res_users: Login successful for login:petr@gmail.com from 127.0.0.1 
+2026-11-12 11:10:05,448 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "POST /web/login HTTP/1.1" 303 - 14 0.009 0.763
+2026-11-12 11:10:05,459 19324 INFO Test odoo.addons.base.models.res_device: User 12 inserts device log (vG0JoIFcW3SEnnWI8WJha9HXcoKTeOzx-Iy3rO-e5K) 
+2026-11-12 11:10:05,466 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "GET /odoo HTTP/1.1" 200 - 9 0.003 0.012
+2026-11-12 11:10:05,491 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "GET /web/webclient/load_menus HTTP/1.1" 200 - 1 0.001 0.013
+2026-11-12 11:10:05,493 19324 INFO Test odoo.addons.base.models.ir_model: Access Denied by ACLs for operation: read, uid: 12, model: ir.module.module 
+2026-11-12 11:10:05,495 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 3 0.002 0.009
+2026-11-12 11:10:05,540 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 3 0.001 0.004
+2026-11-12 11:10:05,565 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "POST /web/action/load HTTP/1.1" 200 - 9 0.010 0.006
+2026-11-12 11:10:05,568 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "GET /web/image?model=res.users&field=avatar_128&id=12 HTTP/1.1" 304 - 8 0.005 0.013
+2026-11-12 11:10:05,573 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 2 0.002 0.010
+2026-11-12 11:10:05,575 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.004 0.005
+2026-11-12 11:10:05,587 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:05] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.001 0.004
+2026-11-12 11:10:07,029 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:07] "POST /web/action/load HTTP/1.1" 200 - 9 0.007 0.009
+2026-11-12 11:10:07,040 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:07] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 4 0.002 0.012
+2026-11-12 11:10:07,042 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:07] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 2 0.001 0.018
+2026-11-12 11:10:10,781 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:10] "POST /web/action/load HTTP/1.1" 200 - 9 0.010 0.006
+2026-11-12 11:10:10,788 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:10] "POST /web/dataset/call_kw/library.member/get_views#library.member.get_views HTTP/1.1" 200 - 2 0.003 0.012
+2026-11-12 11:10:10,788 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:10] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.006 0.007
+2026-11-12 11:10:11,710 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:11] "POST /web/action/load HTTP/1.1" 200 - 9 0.006 0.009
+2026-11-12 11:10:11,717 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:11] "POST /web/dataset/call_kw/library.copy/get_views#library.copy.get_views HTTP/1.1" 200 - 2 0.002 0.014
+2026-11-12 11:10:11,718 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:11] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.005 0.006
+2026-11-12 11:10:12,216 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:12] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.001 0.006
+2026-11-12 11:10:12,987 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:12] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.002 0.004
+2026-11-12 11:10:13,408 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:13] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.000 0.005
+2026-11-12 11:10:13,932 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:13] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.003 0.005
+2026-11-12 11:10:14,775 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:14] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.002 0.003
+2026-11-12 11:10:15,160 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:15] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.004
+2026-11-12 11:10:15,452 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:15] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.003 0.016
+2026-11-12 11:10:15,690 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:15] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.002 0.005
+2026-11-12 11:10:15,946 19324 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:10:15] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.002 0.006
