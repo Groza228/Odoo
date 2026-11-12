@@ -236,6 +236,11 @@
                     domain="[('is_overdue', '=', True)]"
                 />
                 <filter
+                    name="filter_display_overdue"
+                    string="Прострочено"
+                    domain="[('display_state', '=', 'overdue')]"
+                />
+                <filter
                     name="filter_with_fine"
                     string="Зі штрафом"
                     domain="[('fine_amount', '>', 0)]"

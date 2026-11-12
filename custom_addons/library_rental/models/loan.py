@@ -1,5 +1,8 @@
+from datetime import timedelta
+
 from odoo import api, fields, models
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError, ValidationError
+from odoo.osv import expression
 
 
 LOAN_PERIOD_DAYS = 14
@@ -55,6 +58,7 @@ class LibraryLoan(models.Model):
         ],
         string='Етап',
         compute='_compute_display_state',
+        search='_search_display_state',
     )
     state = fields.Selection(
         selection=[('active', 'Видано'), ('returned', 'Повернено')],
@@ -161,7 +165,7 @@ class LibraryLoan(models.Model):
                 else rec.days_late * FINE_PER_DAY
             )
 
-    @api.depends('state', 'due_date')
+    @api.depends('state', 'loan_date', 'due_date')
     def _compute_display_state(self):
         today = fields.Date.context_today(self)
         for rec in self:
@@ -171,6 +175,55 @@ class LibraryLoan(models.Model):
                 rec.display_state = 'overdue'
             else:
                 rec.display_state = 'active'
+
+    def _search_display_state(self, operator, value):
+        today = fields.Date.context_today(self)
+        overdue = [('state', '=', 'active'), ('due_date', '<', today)]
+        active = [
+            ('state', '=', 'active'),
+            '|',
+            ('due_date', '>=', today),
+            ('due_date', '=', False),
+        ]
+        returned = [('state', '=', 'returned')]
+        mapping = {
+            'overdue': overdue,
+            'active': active,
+            'returned': returned,
+        }
+        if operator not in ('=', '!=', 'in', 'not in'):
+            raise UserError('Непідтримуваний оператор пошуку.')
+        values = (
+            list(value)
+            if not isinstance(value, str) and hasattr(value, '__iter__')
+            else [value]
+        )
+        domain = expression.OR([mapping[v] for v in values if v in mapping])
+        if operator in ('!=', 'not in'):
+            domain = ['!'] + domain
+        return domain
+
+    @api.onchange('loan_date')
+    def _onchange_loan_date_overdue(self):
+        today = fields.Date.context_today(self)
+        for rec in self:
+            due_date = (
+                rec.loan_date + timedelta(days=LOAN_PERIOD_DAYS)
+                if rec.loan_date
+                else False
+            )
+            if rec.state == 'active' and due_date and due_date < today:
+                days = (today - due_date).days
+                return {
+                    'warning': {
+                        'title': 'Видача прострочена',
+                        'message': (
+                            'За обраною датою видачі термін повернення '
+                            'вже минув на %s дн. Статус буде '
+                            '«Прострочено».' % days
+                        ),
+                    }
+                }
 
     def action_return(self):
         for rec in self:
