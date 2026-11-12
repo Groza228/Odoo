@@ -6,3 +6,4 @@ access_library_loan_user,доступ.до.видач.бібліотекар,mod
 access_library_book_reader,доступ.до.книг.читач,model_library_book,library_rental.group_library_reader,1,0,0,0
 access_library_copy_reader,доступ.до.примірників.читач,model_library_copy,library_rental.group_library_reader,1,0,0,0
 access_library_loan_reader,доступ.до.видач.читач,model_library_loan,library_rental.group_library_reader,1,0,0,0
+access_library_return_wizard_librarian,оформлення повернення бібліотекар,model_library_return_wizard,library_rental.group_library_librarian,1,1,1,1

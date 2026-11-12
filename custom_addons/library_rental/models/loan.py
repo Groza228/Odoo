@@ -34,6 +34,10 @@ class LibraryLoan(models.Model):
         store=True,
     )
     return_date = fields.Date(string='Дата повернення')
+    return_note = fields.Text(
+        string='Примітка при поверненні',
+        readonly=True,
+    )
     is_late_return = fields.Boolean(
         compute='_compute_is_late_return',
         store=True,

@@ -12,6 +12,11 @@ class LibraryMember(models.Model):
         string='Користувач',
         ondelete='set null',
     )
+    loan_ids = fields.One2many(
+        'library.loan',
+        'member_id',
+        string='Видачі',
+    )
 
     _membership_number_unique = models.Constraint(
         'UNIQUE(membership_number)',

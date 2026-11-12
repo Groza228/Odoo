@@ -1,0 +1,88 @@
+<odoo>
+    <template id="report_member_loan_history">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="member">
+                <t t-call="library_rental.report_member_loan_history_document"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="report_member_loan_history_document">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <h2>Історія видач читача</h2>
+                <p>
+                    <strong>Читач:</strong>
+                    <span t-field="member.name"/>
+                </p>
+                <p>
+                    <strong>Номер читацького квитка:</strong>
+                    <span t-field="member.membership_number"/>
+                </p>
+
+                <t t-if="member.loan_ids">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Книга</th>
+                                <th>Автор</th>
+                                <th>Інвентарний номер</th>
+                                <th>Дата видачі</th>
+                                <th>Термін повернення</th>
+                                <th>Дата повернення</th>
+                                <th>Етап</th>
+                                <th>Штраф</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="member.loan_ids" t-as="loan">
+                                <tr>
+                                    <td><span t-field="loan.book_id.name"/></td>
+                                    <td><span t-field="loan.book_author"/></td>
+                                    <td><span t-field="loan.inventory_number"/></td>
+                                    <td><span t-field="loan.loan_date"/></td>
+                                    <td><span t-field="loan.due_date"/></td>
+                                    <td>
+                                        <t t-if="loan.return_date">
+                                            <span t-field="loan.return_date"/>
+                                        </t>
+                                    </td>
+                                    <td><span t-field="loan.display_state"/></td>
+                                    <td><span t-field="loan.fine_amount"/></td>
+                                </tr>
+                                <tr t-if="loan.return_note">
+                                    <td colspan="8">
+                                        <strong>Примітка при поверненні:</strong>
+                                        <span t-field="loan.return_note"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                        <tfoot>
+                            <t t-set="loan_count" t-value="len(member.loan_ids)"/>
+                            <t t-set="total_fine" t-value="sum(member.loan_ids.mapped('fine_amount'))"/>
+                            <tr>
+                                <td colspan="7"><strong>Разом видач:</strong> <span t-esc="loan_count"/></td>
+                                <td><strong><span t-esc="total_fine"/></strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </t>
+                <t t-else="">
+                    <p>Видач немає.</p>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <record id="action_report_member_loan_history" model="ir.actions.report">
+        <field name="name">Історія видач читача</field>
+        <field name="model">library.member</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">library_rental.report_member_loan_history</field>
+        <field name="binding_model_id" ref="model_library_member"/>
+        <field name="binding_type">report</field>
+        <field name="print_report_name">'Історія видач - %s' % (object.name)</field>
+        <field name="group_ids" eval="[(6, 0, [ref('group_library_librarian')])]"/>
+    </record>
+</odoo>

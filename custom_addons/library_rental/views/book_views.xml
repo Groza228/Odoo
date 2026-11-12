@@ -183,6 +183,15 @@
                         groups="library_rental.group_library_librarian"
                     />
                     <button
+                        name="%(action_library_return_wizard)d"
+                        string="Оформити повернення"
+                        type="action"
+                        class="btn-primary"
+                        context="{'default_loan_id': id}"
+                        invisible="state != 'active' or not id"
+                        groups="library_rental.group_library_librarian"
+                    />
+                    <button
                         name="action_restore"
                         string="Відновити"
                         type="object"
@@ -221,6 +230,11 @@
                             <field
                                 name="fine_amount"
                                 string="Штраф (фінальний)"
+                                readonly="1"
+                            />
+                            <field
+                                name="return_note"
+                                invisible="not return_note"
                                 readonly="1"
                             />
                         </group>
