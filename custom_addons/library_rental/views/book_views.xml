@@ -137,7 +137,11 @@
         <field name="name">library.loan.list</field>
         <field name="model">library.loan</field>
         <field name="arch" type="xml">
-            <list string="Видачі">
+            <list
+                string="Видачі"
+                decoration-danger="is_overdue"
+                decoration-success="state == 'returned' and fine_amount == 0"
+            >
                 <field name="copy_id"/>
                 <field name="book_id"/>
                 <field name="member_id"/>
@@ -145,6 +149,9 @@
                 <field name="due_date"/>
                 <field name="return_date"/>
                 <field name="state"/>
+                <field name="days_late"/>
+                <field name="current_fine"/>
+                <field name="fine_amount"/>
             </list>
         </field>
     </record>
@@ -160,7 +167,7 @@
                         string="Повернути"
                         type="object"
                         class="btn-primary"
-                        invisible="state != 'active'"
+                        invisible="state != 'active' or not id"
                     />
                     <field
                         name="state"
@@ -169,6 +176,12 @@
                     />
                 </header>
                 <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Прострочено"
+                        bg_color="text-bg-danger"
+                        invisible="not is_overdue"
+                    />
                     <group>
                         <group>
                             <field name="copy_id"/>
@@ -182,10 +195,65 @@
                             <field name="loan_date"/>
                             <field name="due_date"/>
                             <field name="return_date"/>
+                            <field name="days_late" readonly="1" invisible="days_late == 0"/>
+                            <field
+                                name="current_fine"
+                                string="Штраф (поточний)"
+                                readonly="1"
+                                invisible="days_late == 0"
+                            />
+                            <field
+                                name="fine_amount"
+                                string="Штраф (фінальний)"
+                                readonly="1"
+                            />
                         </group>
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <record id="view_library_loan_search" model="ir.ui.view">
+        <field name="name">library.loan.search</field>
+        <field name="model">library.loan</field>
+        <field name="arch" type="xml">
+            <search string="Видачі">
+                <field name="member_id"/>
+                <field name="state"/>
+                <filter
+                    name="filter_overdue"
+                    string="Прострочені"
+                    domain="[('is_overdue', '=', True)]"
+                />
+                <filter
+                    name="filter_with_fine"
+                    string="Зі штрафом"
+                    domain="[('fine_amount', '>', 0)]"
+                />
+                <filter
+                    name="filter_active"
+                    string="Активні"
+                    domain="[('state', '=', 'active')]"
+                />
+                <filter
+                    name="filter_returned"
+                    string="Повернені"
+                    domain="[('state', '=', 'returned')]"
+                />
+                <filter
+                    name="group_member"
+                    string="Читачем"
+                    domain="[]"
+                    context="{'group_by': 'member_id'}"
+                />
+                <filter
+                    name="group_state"
+                    string="Статусом"
+                    domain="[]"
+                    context="{'group_by': 'state'}"
+                />
+            </search>
         </field>
     </record>
 
