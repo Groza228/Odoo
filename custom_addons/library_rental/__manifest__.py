@@ -5,6 +5,7 @@
     'depends': ['base'],
     'license': 'LGPL-3',
     'data': [
+        'security/library_security.xml',
         'security/ir.model.access.csv',
         'views/book_views.xml',
     ],

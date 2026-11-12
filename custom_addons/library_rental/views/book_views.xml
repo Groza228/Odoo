@@ -51,6 +51,7 @@
         name="Книги"
         parent="menu_library_rental_root"
         action="action_library_book"
+        groups="library_rental.group_library_librarian"
     />
 
     <record id="view_library_copy_list" model="ir.ui.view">
@@ -92,6 +93,7 @@
         name="Примірники"
         parent="menu_library_rental_root"
         action="action_library_copy"
+        groups="library_rental.group_library_librarian"
     />
 
     <record id="view_library_member_list" model="ir.ui.view">
@@ -114,6 +116,7 @@
                     <group>
                         <field name="name"/>
                         <field name="membership_number"/>
+                        <field name="user_id"/>
                     </group>
                 </sheet>
             </form>
@@ -131,6 +134,7 @@
         name="Читачі"
         parent="menu_library_rental_root"
         action="action_library_member"
+        groups="library_rental.group_library_librarian"
     />
 
     <record id="view_library_loan_list" model="ir.ui.view">
@@ -144,7 +148,8 @@
             >
                 <field name="copy_id"/>
                 <field name="book_id"/>
-                <field name="member_id"/>
+                <field name="member_id" groups="library_rental.group_library_librarian"/>
+                <field name="member_name" groups="library_rental.group_library_reader"/>
                 <field name="loan_date" readonly="1"/>
                 <field name="due_date"/>
                 <field name="return_date" readonly="state == 'returned'"/>
@@ -175,6 +180,7 @@
                         type="object"
                         class="btn-primary"
                         invisible="state != 'active' or not id"
+                        groups="library_rental.group_library_librarian"
                     />
                     <button
                         name="action_restore"
@@ -182,6 +188,7 @@
                         type="object"
                         invisible="state != 'returned' or not id"
                         confirm="Відновити видачу? Дата повернення буде очищена, штраф перерахується."
+                        groups="library_rental.group_library_librarian"
                     />
                 </header>
                 <sheet>
@@ -199,8 +206,8 @@
                             <field name="inventory_number"/>
                         </group>
                         <group>
-                            <field name="member_id"/>
-                            <field name="member_name"/>
+                            <field name="member_id" groups="library_rental.group_library_librarian"/>
+                            <field name="member_name" groups="library_rental.group_library_reader"/>
                             <field name="loan_date" readonly="id"/>
                             <field name="due_date"/>
                             <field name="return_date" readonly="state == 'returned'"/>
@@ -282,5 +289,14 @@
         name="Видачі"
         parent="menu_library_rental_root"
         action="action_library_loan"
+        groups="library_rental.group_library_librarian"
+    />
+
+    <menuitem
+        id="menu_library_my_loans"
+        name="Мої видачі"
+        parent="menu_library_rental_root"
+        action="action_library_loan"
+        groups="library_rental.group_library_reader"
     />
 </odoo>

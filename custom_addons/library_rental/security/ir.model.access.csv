@@ -1,5 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_library_book_user,доступ.до.книг,model_library_book,base.group_user,1,1,1,1
-access_library_copy_user,доступ.до.примірників,model_library_copy,base.group_user,1,1,1,1
-access_library_member_user,доступ.до.читачів,model_library_member,base.group_user,1,1,1,1
-access_library_loan_user,доступ.до.видач,model_library_loan,base.group_user,1,1,1,1
+access_library_book_user,доступ.до.книг.бібліотекар,model_library_book,library_rental.group_library_librarian,1,1,1,1
+access_library_copy_user,доступ.до.примірників.бібліотекар,model_library_copy,library_rental.group_library_librarian,1,1,1,1
+access_library_member_user,доступ.до.читачів.бібліотекар,model_library_member,library_rental.group_library_librarian,1,1,1,1
+access_library_loan_user,доступ.до.видач.бібліотекар,model_library_loan,library_rental.group_library_librarian,1,1,1,1
+access_library_book_reader,доступ.до.книг.читач,model_library_book,library_rental.group_library_reader,1,0,0,0
+access_library_copy_reader,доступ.до.примірників.читач,model_library_copy,library_rental.group_library_reader,1,0,0,0
+access_library_loan_reader,доступ.до.видач.читач,model_library_loan,library_rental.group_library_reader,1,0,0,0

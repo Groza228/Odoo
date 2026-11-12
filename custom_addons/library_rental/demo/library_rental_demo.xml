@@ -39,9 +39,17 @@
         <field name="condition">damaged</field>
     </record>
 
+    <record id="user_reader_demo" model="res.users">
+        <field name="name">Демо-читач</field>
+        <field name="login">reader_demo</field>
+        <field name="password">reader_demo</field>
+        <field name="group_ids" eval="[(6, 0, [ref('base.group_user'), ref('library_rental.group_library_reader')])]"/>
+    </record>
+
     <record id="member_anna" model="library.member">
         <field name="name">Анна Коваленко</field>
         <field name="membership_number">LIB-001</field>
+        <field name="user_id" ref="user_reader_demo"/>
     </record>
     <record id="member_bohdan" model="library.member">
         <field name="name">Богдан Мельник</field>
