@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_library_book_user,доступ.до.книг,model_library_book,base.group_user,1,1,1,1
+access_library_copy_user,доступ.до.примірників,model_library_copy,base.group_user,1,1,1,1
+access_library_member_user,доступ.до.читачів,model_library_member,base.group_user,1,1,1,1
+access_library_loan_user,доступ.до.видач,model_library_loan,base.group_user,1,1,1,1

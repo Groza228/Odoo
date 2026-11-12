@@ -1,0 +1,77 @@
+<odoo>
+    <record id="book_clean_code" model="library.book">
+        <field name="name">Чистий код</field>
+        <field name="author">Роберт К. Мартін</field>
+        <field name="isbn">9780132350884</field>
+        <field name="publish_year">2008</field>
+    </record>
+    <record id="book_pragmatic_programmer" model="library.book">
+        <field name="name">Прагматичний програміст</field>
+        <field name="author">Ендрю Гант</field>
+        <field name="isbn">9780135957059</field>
+        <field name="publish_year">2019</field>
+    </record>
+    <record id="book_domain_driven_design" model="library.book">
+        <field name="name">Предметно-орієнтоване проєктування</field>
+        <field name="author">Ерік Еванс</field>
+        <field name="isbn">9780321125217</field>
+        <field name="publish_year">2003</field>
+    </record>
+
+    <record id="copy_clean_code_001" model="library.copy">
+        <field name="book_id" ref="book_clean_code"/>
+        <field name="inventory_number">CC-001</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_clean_code_002" model="library.copy">
+        <field name="book_id" ref="book_clean_code"/>
+        <field name="inventory_number">CC-002</field>
+        <field name="condition">new</field>
+    </record>
+    <record id="copy_pragmatic_001" model="library.copy">
+        <field name="book_id" ref="book_pragmatic_programmer"/>
+        <field name="inventory_number">PP-001</field>
+        <field name="condition">good</field>
+    </record>
+    <record id="copy_domain_001" model="library.copy">
+        <field name="book_id" ref="book_domain_driven_design"/>
+        <field name="inventory_number">DDD-001</field>
+        <field name="condition">damaged</field>
+    </record>
+
+    <record id="member_anna" model="library.member">
+        <field name="name">Анна Коваленко</field>
+        <field name="membership_number">LIB-001</field>
+    </record>
+    <record id="member_bohdan" model="library.member">
+        <field name="name">Богдан Мельник</field>
+        <field name="membership_number">LIB-002</field>
+    </record>
+    <record id="member_olena" model="library.member">
+        <field name="name">Олена Шевченко</field>
+        <field name="membership_number">LIB-003</field>
+    </record>
+
+    <record id="loan_clean_code_anna" model="library.loan">
+        <field name="copy_id" ref="copy_clean_code_001"/>
+        <field name="member_id" ref="member_anna"/>
+        <field name="loan_date">2026-10-01</field>
+        <field name="due_date">2026-10-15</field>
+        <field name="state">active</field>
+    </record>
+    <record id="loan_pragmatic_bohdan" model="library.loan">
+        <field name="copy_id" ref="copy_pragmatic_001"/>
+        <field name="member_id" ref="member_bohdan"/>
+        <field name="loan_date">2026-10-20</field>
+        <field name="due_date">2026-11-03</field>
+        <field name="state">active</field>
+    </record>
+    <record id="loan_domain_olena" model="library.loan">
+        <field name="copy_id" ref="copy_domain_001"/>
+        <field name="member_id" ref="member_olena"/>
+        <field name="loan_date">2026-09-01</field>
+        <field name="due_date">2026-09-15</field>
+        <field name="return_date">2026-09-14</field>
+        <field name="state">returned</field>
+    </record>
+</odoo>

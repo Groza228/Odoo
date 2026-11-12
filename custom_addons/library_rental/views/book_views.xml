@@ -1,0 +1,191 @@
+<odoo>
+    <record id="view_library_book_tree" model="ir.ui.view">
+        <field name="name">library.book.tree</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <list string="Книги">
+                <field name="name"/>
+                <field name="author"/>
+                <field name="isbn"/>
+                <field name="publish_year"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_library_book_form" model="ir.ui.view">
+        <field name="name">library.book.form</field>
+        <field name="model">library.book</field>
+        <field name="arch" type="xml">
+            <form string="Книга">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="author"/>
+                        <field name="isbn"/>
+                        <field name="publish_year"/>
+                    </group>
+                    <notebook>
+                        <page string="Примірники">
+                            <field name="copy_ids">
+                                <list editable="bottom">
+                                    <field name="inventory_number"/>
+                                    <field name="condition"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_library_book" model="ir.actions.act_window">
+        <field name="name">Книги</field>
+        <field name="res_model">library.book</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_library_rental_root" name="Бібліотека"/>
+    <menuitem
+        id="menu_library_book"
+        name="Книги"
+        parent="menu_library_rental_root"
+        action="action_library_book"
+    />
+
+    <record id="view_library_copy_list" model="ir.ui.view">
+        <field name="name">library.copy.list</field>
+        <field name="model">library.copy</field>
+        <field name="arch" type="xml">
+            <list string="Примірники">
+                <field name="inventory_number"/>
+                <field name="book_id"/>
+                <field name="condition"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_library_copy_form" model="ir.ui.view">
+        <field name="name">library.copy.form</field>
+        <field name="model">library.copy</field>
+        <field name="arch" type="xml">
+            <form string="Примірник">
+                <sheet>
+                    <group>
+                        <field name="book_id"/>
+                        <field name="inventory_number"/>
+                        <field name="condition"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_library_copy" model="ir.actions.act_window">
+        <field name="name">Примірники</field>
+        <field name="res_model">library.copy</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+        id="menu_library_copy"
+        name="Примірники"
+        parent="menu_library_rental_root"
+        action="action_library_copy"
+    />
+
+    <record id="view_library_member_list" model="ir.ui.view">
+        <field name="name">library.member.list</field>
+        <field name="model">library.member</field>
+        <field name="arch" type="xml">
+            <list string="Читачі">
+                <field name="name"/>
+                <field name="membership_number"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_library_member_form" model="ir.ui.view">
+        <field name="name">library.member.form</field>
+        <field name="model">library.member</field>
+        <field name="arch" type="xml">
+            <form string="Читач">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="membership_number"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_library_member" model="ir.actions.act_window">
+        <field name="name">Читачі</field>
+        <field name="res_model">library.member</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+        id="menu_library_member"
+        name="Читачі"
+        parent="menu_library_rental_root"
+        action="action_library_member"
+    />
+
+    <record id="view_library_loan_list" model="ir.ui.view">
+        <field name="name">library.loan.list</field>
+        <field name="model">library.loan</field>
+        <field name="arch" type="xml">
+            <list string="Видачі">
+                <field name="copy_id"/>
+                <field name="book_id"/>
+                <field name="member_id"/>
+                <field name="loan_date"/>
+                <field name="due_date"/>
+                <field name="return_date"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_library_loan_form" model="ir.ui.view">
+        <field name="name">library.loan.form</field>
+        <field name="model">library.loan</field>
+        <field name="arch" type="xml">
+            <form string="Видача">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="copy_id"/>
+                            <field name="book_id"/>
+                            <field name="book_author"/>
+                            <field name="inventory_number"/>
+                        </group>
+                        <group>
+                            <field name="member_id"/>
+                            <field name="member_name"/>
+                            <field name="loan_date"/>
+                            <field name="due_date"/>
+                            <field name="return_date"/>
+                            <field name="state"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_library_loan" model="ir.actions.act_window">
+        <field name="name">Видачі</field>
+        <field name="res_model">library.loan</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+        id="menu_library_loan"
+        name="Видачі"
+        parent="menu_library_rental_root"
+        action="action_library_loan"
+    />
+</odoo>
