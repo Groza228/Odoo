@@ -47,6 +47,15 @@ class LibraryLoan(models.Model):
         string='Штраф (поточний)',
         compute='_compute_current_fine',
     )
+    display_state = fields.Selection(
+        selection=[
+            ('active', 'Видано'),
+            ('overdue', 'Прострочено'),
+            ('returned', 'Повернено'),
+        ],
+        string='Етап',
+        compute='_compute_display_state',
+    )
     state = fields.Selection(
         selection=[('active', 'Видано'), ('returned', 'Повернено')],
         string='Статус',
@@ -152,6 +161,17 @@ class LibraryLoan(models.Model):
                 else rec.days_late * FINE_PER_DAY
             )
 
+    @api.depends('state', 'due_date')
+    def _compute_display_state(self):
+        today = fields.Date.context_today(self)
+        for rec in self:
+            if rec.state == 'returned':
+                rec.display_state = 'returned'
+            elif rec.due_date and rec.due_date < today:
+                rec.display_state = 'overdue'
+            else:
+                rec.display_state = 'active'
+
     def action_return(self):
         for rec in self:
             if rec.state == 'returned':
@@ -159,4 +179,21 @@ class LibraryLoan(models.Model):
             rec.state = 'returned'
             if not rec.return_date:
                 rec.return_date = fields.Date.context_today(rec)
+        return True
+
+    def action_restore(self):
+        for rec in self:
+            if rec.state != 'returned':
+                raise ValidationError('Відновити можна лише повернену видачу.')
+            conflict = self.search_count([
+                ('copy_id', '=', rec.copy_id.id),
+                ('state', '=', 'active'),
+                ('id', '!=', rec.id),
+            ])
+            if conflict:
+                raise ValidationError(
+                    'Цей примірник уже має іншу активну видачу, '
+                    'тому відновити цю видачу неможливо.'
+                )
+            rec.write({'state': 'active', 'return_date': False})
         return True

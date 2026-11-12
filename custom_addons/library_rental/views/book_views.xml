@@ -149,6 +149,7 @@
                 <field name="due_date"/>
                 <field name="return_date"/>
                 <field name="state"/>
+                <field name="display_state" widget="badge"/>
                 <field name="days_late"/>
                 <field name="current_fine"/>
                 <field name="fine_amount"/>
@@ -162,6 +163,12 @@
         <field name="arch" type="xml">
             <form string="Видача">
                 <header>
+                    <field
+                        name="display_state"
+                        widget="statusbar"
+                        statusbar_visible="active,overdue,returned"
+                    />
+                    <field name="state" invisible="1"/>
                     <button
                         name="action_return"
                         string="Повернути"
@@ -169,10 +176,12 @@
                         class="btn-primary"
                         invisible="state != 'active' or not id"
                     />
-                    <field
-                        name="state"
-                        widget="statusbar"
-                        statusbar_visible="active,returned"
+                    <button
+                        name="action_restore"
+                        string="Відновити"
+                        type="object"
+                        invisible="state != 'returned' or not id"
+                        confirm="Відновити видачу? Дата повернення буде очищена, штраф перерахується."
                     />
                 </header>
                 <sheet>
