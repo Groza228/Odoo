@@ -80,3 +80,40 @@ loan.write({'state': 'returned', 'return_date': fields.Date.today()})
 
 Результат: нову видачу створено зі станом `active`, а потім змінено на
 `returned` із поточною датою повернення.
+
+## Як перевірити етап Прострочено
+
+1. **Через демо-дані.** Оновіть модуль у базі `Test`:
+
+   ```powershell
+   python odoo-bin -d Test -u library_rental --stop-after-init
+   ```
+
+   Демо-видачі зі старими датами завантажуються в `install_mode`. Після
+   оновлення відкрийте меню «Видачі» й перевірте етап «Прострочено».
+
+2. **Через Odoo shell.** Для тестової старої дати використовуйте контекст,
+   який не діє для звичайних користувачів:
+
+   ```python
+   from datetime import timedelta
+   from odoo import fields
+
+   loan = env['library.loan'].with_context(
+       allow_past_loan_date=True,
+   ).create({
+       'copy_id': env['library.copy'].search([], limit=1).id,
+       'member_id': env['library.member'].search([], limit=1).id,
+       'loan_date': fields.Date.context_today(env['library.loan']) - timedelta(days=20),
+   })
+   loan.display_state
+   ```
+
+   Результат: `overdue`. Після тесту видаліть створену видачу.
+
+3. **У Python-тесті.** Створіть тестову видачу з
+   `allow_past_loan_date=True` і перевірте
+   `loan.display_state == 'overdue'`, `loan.days_late` та
+   `loan.current_fine`. Не використовуйте цей контекст у звичайному
+   користувацькому сценарії: минула дата відхиляється, а після створення
+   `loan_date` змінювати не можна.

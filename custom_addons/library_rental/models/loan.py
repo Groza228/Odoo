@@ -218,6 +218,15 @@ class LibraryLoan(models.Model):
                     'Дата видачі не може бути раніше за сьогоднішню.'
                 )
 
+    def write(self, vals):
+        if 'loan_date' in vals and not self.env.context.get('allow_past_loan_date'):
+            for rec in self:
+                if rec.id and rec.loan_date != fields.Date.to_date(vals['loan_date']):
+                    raise ValidationError(
+                        'Дату видачі не можна змінювати після створення.'
+                    )
+        return super().write(vals)
+
     def action_return(self):
         for rec in self:
             if rec.state == 'returned':

@@ -201,7 +201,7 @@
                         <group>
                             <field name="member_id"/>
                             <field name="member_name"/>
-                            <field name="loan_date"/>
+                            <field name="loan_date" readonly="id"/>
                             <field name="due_date"/>
                             <field name="return_date"/>
                             <field name="days_late" readonly="1" invisible="days_late == 0"/>
