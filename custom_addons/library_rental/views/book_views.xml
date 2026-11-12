@@ -145,7 +145,7 @@
                 <field name="copy_id"/>
                 <field name="book_id"/>
                 <field name="member_id"/>
-                <field name="loan_date"/>
+                <field name="loan_date" readonly="1"/>
                 <field name="due_date"/>
                 <field name="return_date"/>
                 <field name="state"/>

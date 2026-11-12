@@ -219,9 +219,10 @@ class LibraryLoan(models.Model):
                 )
 
     def write(self, vals):
-        if 'loan_date' in vals and not self.env.context.get('allow_past_loan_date'):
+        if 'loan_date' in vals and not self.env.context.get('allow_loan_date_change'):
+            new_date = fields.Date.to_date(vals['loan_date'])
             for rec in self:
-                if rec.id and rec.loan_date != fields.Date.to_date(vals['loan_date']):
+                if rec.loan_date != new_date:
                     raise ValidationError(
                         'Дату видачі не можна змінювати після створення.'
                     )
