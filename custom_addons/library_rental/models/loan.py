@@ -1,5 +1,3 @@
-from datetime import timedelta
-
 from odoo import api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.osv import expression
@@ -25,7 +23,11 @@ class LibraryLoan(models.Model):
         required=True,
         ondelete='restrict',
     )
-    loan_date = fields.Date(string='Дата видачі', default=fields.Date.today, required=True)
+    loan_date = fields.Date(
+        string='Дата видачі',
+        default=fields.Date.context_today,
+        required=True,
+    )
     due_date = fields.Date(
         string='Повернути до',
         compute='_compute_due_date',
@@ -203,27 +205,18 @@ class LibraryLoan(models.Model):
             domain = ['!'] + domain
         return domain
 
-    @api.onchange('loan_date')
-    def _onchange_loan_date_overdue(self):
+    @api.constrains('loan_date')
+    def _check_loan_date_not_in_past(self):
+        ctx = self.env.context
+        # This context key is intended only for demo data and tests.
+        if ctx.get('install_mode') or ctx.get('allow_past_loan_date'):
+            return
         today = fields.Date.context_today(self)
         for rec in self:
-            due_date = (
-                rec.loan_date + timedelta(days=LOAN_PERIOD_DAYS)
-                if rec.loan_date
-                else False
-            )
-            if rec.state == 'active' and due_date and due_date < today:
-                days = (today - due_date).days
-                return {
-                    'warning': {
-                        'title': 'Видача прострочена',
-                        'message': (
-                            'За обраною датою видачі термін повернення '
-                            'вже минув на %s дн. Статус буде '
-                            '«Прострочено».' % days
-                        ),
-                    }
-                }
+            if rec.loan_date and rec.loan_date < today:
+                raise ValidationError(
+                    'Дата видачі не може бути раніше за сьогоднішню.'
+                )
 
     def action_return(self):
         for rec in self:
