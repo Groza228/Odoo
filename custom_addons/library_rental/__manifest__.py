@@ -9,6 +9,7 @@
         'security/ir.model.access.csv',
         'views/return_wizard_views.xml',
         'views/book_views.xml',
+        'data/library_data.xml',
         'report/report_member_loan_history.xml',
     ],
     'demo': [
