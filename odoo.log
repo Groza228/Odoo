@@ -13798,3 +13798,227 @@ psycopg2.errors.SerializationFailure: ПОМИЛКА:  не вдалося серіалізувати доступ 
 2026-11-12 11:40:28,664 20860 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:40:28] "POST /web/action/load HTTP/1.1" 200 - 9 0.004 0.006
 2026-11-12 11:40:28,696 20860 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:40:28] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 19 0.010 0.017
 2026-11-12 11:40:28,710 20860 INFO Test werkzeug: 127.0.0.1 - - [12/Nov/2026 11:40:28] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 5 0.004 0.006
+2026-11-12 11:41:56,115 20860 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-11-12 11:41:56,200 20860 INFO Test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-11-12 11:41:56,203 20860 INFO Test odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-11-12 11:41:56,205 20860 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:41:56,210 20860 INFO Test odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-11-12 11:41:56,217 20860 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-12 11:41:56,222 20860 INFO Test odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-11-12 11:41:56,226 20860 INFO Test odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-11-12 11:41:56,228 20860 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.11s) 
+2026-11-12 11:42:41,903 20860 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-12 11:42:41,903 20860 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-12 11:42:42,288 20860 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-11-12 11:42:42,288 20860 INFO ? odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 7 connections  
+2026-11-22 23:13:20,951 20684 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-22 23:13:20,952 20684 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-22 23:13:20,952 20684 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-22 23:13:20,952 20684 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-22 23:13:23,564 20684 INFO ? odoo.service.server: HTTP service (werkzeug) running on Asta:8069 
+2026-11-22 23:13:42,687 20684 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-11-22 23:13:42,689 20684 INFO ? odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-11-22 23:13:42,697 20684 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-22 23:13:42,706 20684 INFO ? odoo.modules.loading: loading 15 modules... 
+2026-11-22 23:13:42,891 20684 WARNING ? py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Odoo\server\odoo\service\server.py", line 132, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 363, in handle
+    super().handle()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Odoo\server\odoo\http.py", line 2852, in __call__
+    response = request._serve_db()
+  File "C:\Odoo\server\odoo\http.py", line 2275, in _serve_db
+    registry = Registry(self.db)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 3, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-22 23:13:43,296 20684 INFO ? odoo.modules.loading: 15 modules loaded in 0.59s, 0 queries (+0 extra) 
+2026-11-22 23:13:43,346 20684 INFO ? odoo.modules.loading: Modules loaded. 
+2026-11-22 23:13:43,375 20684 INFO ? odoo.registry: Registry loaded in 0.859s 
+2026-11-22 23:13:43,376 20684 INFO Test odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-11-22 23:13:43,392 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:43] "GET / HTTP/1.1" 303 - 24 0.191 0.759
+2026-11-22 23:13:43,441 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:43] "GET /odoo HTTP/1.1" 303 - 2 0.005 0.036
+2026-11-22 23:13:43,840 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:43] "GET /web/login?redirect=%2Fodoo%3F HTTP/1.1" 200 - 50 0.072 0.322
+2026-11-22 23:13:43,992 20684 INFO ? werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:43] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 1 0.004 0.126
+2026-11-22 23:13:44,032 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:44] "GET /web/assets/c90429f/web.assets_frontend.min.css HTTP/1.1" 200 - 5 0.008 0.161
+2026-11-22 23:13:44,077 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:44] "GET /web/binary/company_logo HTTP/1.1" 200 - 3 0.021 0.191
+2026-11-22 23:13:44,102 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:44] "GET /web/assets/58427bc/web.assets_frontend_minimal.min.js HTTP/1.1" 200 - 5 0.008 0.056
+2026-11-22 23:13:44,213 20684 INFO ? werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:44] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 1 0.004 0.089
+2026-11-22 23:13:44,497 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:44] "GET /web/assets/aa65d56/web.assets_frontend_lazy.min.js HTTP/1.1" 200 - 5 0.005 0.374
+2026-11-22 23:13:45,342 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:45] "GET /web/webclient/translations?hash=&lang= HTTP/1.1" 200 - 4 0.006 0.771
+2026-11-22 23:13:48,240 20684 INFO Test odoo.addons.base.models.res_users: Login successful for login:test@gmail.com from 127.0.0.1 
+2026-11-22 23:13:48,267 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:48] "POST /web/login HTTP/1.1" 303 - 25 0.057 0.813
+2026-11-22 23:13:48,289 20684 INFO Test odoo.addons.base.models.res_device: User 2 inserts device log (PX9oo65yTKV36a6mqYwc1EsDuDrydyjjZ8BnBVcMtJ) 
+2026-11-22 23:13:48,915 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:48] "GET /odoo HTTP/1.1" 200 - 50 0.051 0.595
+2026-11-22 23:13:49,028 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/assets/3028c63/web.assets_web.min.css HTTP/1.1" 200 - 3 0.004 0.090
+2026-11-22 23:13:49,035 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/webclient/load_menus HTTP/1.1" 200 - 11 0.038 0.052
+2026-11-22 23:13:49,050 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 6 0.019 0.082
+2026-11-22 23:13:49,070 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/assets/557c713/web.assets_web_print.min.css HTTP/1.1" 200 - 3 0.000 0.016
+2026-11-22 23:13:49,284 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/assets/b4a6256/web.assets_web.min.js HTTP/1.1" 200 - 3 0.005 0.345
+2026-11-22 23:13:49,411 20684 INFO ? werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/static/img/odoo-icon-192x192.png HTTP/1.1" 200 - 0 0.000 0.005
+2026-11-22 23:13:49,444 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/webclient/translations?hash=&lang=uk_UA HTTP/1.1" 200 - 1 0.001 0.035
+2026-11-22 23:13:49,500 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 200 - 4 0.002 0.020
+2026-11-22 23:13:49,517 20684 INFO ? werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 0 0.000 0.009
+2026-11-22 23:13:49,529 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.001 0.012
+2026-11-22 23:13:49,535 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 15 0.017 0.015
+2026-11-22 23:13:49,546 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "GET /web/image/res.partner/3/avatar_128?unique=1794476416000 HTTP/1.1" 200 - 11 0.029 0.012
+2026-11-22 23:13:49,559 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "POST /web/action/load HTTP/1.1" 200 - 9 0.042 0.011
+2026-11-22 23:13:49,618 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 29 0.026 0.019
+2026-11-22 23:13:49,633 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:13:49] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 3 0.003 0.003
+2026-11-22 23:13:49,853 20684 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-11-22 23:14:20,675 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:14:20] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.000 0.005
+2026-11-22 23:14:23,838 20684 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-11-22 23:14:23,925 20684 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-22 23:14:23,935 20684 INFO Test odoo.models.unlink: User #1 deleted res.config.settings records with IDs: [1, 2, 3, 4] 
+2026-11-22 23:14:23,938 20684 INFO Test odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-11-22 23:14:23,947 20684 INFO Test odoo.models.unlink: User #1 deleted base.module.uninstall records with IDs: [1, 2, 3, 4, 5] 
+2026-11-22 23:14:23,949 20684 INFO Test odoo.addons.base.models.res_users: GC'd 1 user log entries 
+2026-11-22 23:14:23,950 20684 INFO Test odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-11-22 23:14:23,966 20684 INFO Test odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-11-22 23:14:23,993 20684 INFO Test odoo.models.unlink: User #1 deleted ir.cron.progress records with IDs: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37] 
+2026-11-22 23:14:24,010 20684 INFO Test odoo.addons.base.models.ir_attachment: filestore gc 0 checked, 0 removed 
+2026-11-22 23:14:24,023 20684 INFO Test odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-11-22 23:14:24,037 20684 INFO Test odoo.models.unlink: User #1 deleted base.module.update records with IDs: [1, 2] 
+2026-11-22 23:14:24,043 20684 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 0; remaining 0; duration 0.22s) 
+2026-11-22 23:14:24,047 20684 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) starting 
+2026-11-22 23:14:24,053 20684 INFO Test odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) fully done (#loop 1; done 0; remaining 0; duration 0.00s) 
+2026-11-22 23:15:21,655 20684 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:15:21] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.002 0.049
+2026-11-22 23:16:53,176 20684 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-22 23:16:53,176 20684 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-22 23:16:53,323 20684 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-11-22 23:16:53,323 20684 INFO ? odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 7 connections  
+2026-11-22 23:16:54,311 4784 INFO ? odoo: Odoo version 19.0-20261026 
+2026-11-22 23:16:54,311 4784 INFO ? odoo: Using configuration file at c:\odoo\server\odoo.conf 
+2026-11-22 23:16:54,312 4784 INFO ? odoo: addons paths: _NamespacePath(['C:\\Odoo\\server\\odoo\\addons', 'C:\\Odoo\\server\\odoo\\addons', 'c:\\users\\welldone\\appdata\\local\\openerp s.a\\odoo\\addons\\19.0', 'c:\\odoo\\server\\odoo\\addons', 'c:\\odoo\\server\\custom_addons', 'c:\\odoo\\server\\addons']) 
+2026-11-22 23:16:54,312 4784 INFO ? odoo: database: odoo@localhost:5432 
+2026-11-22 23:16:56,387 4784 INFO ? odoo.service.server: HTTP service (werkzeug) running on Asta:8069 
+2026-11-22 23:16:57,037 4784 INFO ? odoo.modules.loading: loading 1 modules... 
+2026-11-22 23:16:57,043 4784 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-11-22 23:16:57,046 4784 WARNING ? odoo.modules.module: Missing `author` key in manifest for 'library_rental', defaulting to '' 
+2026-11-22 23:16:57,051 4784 INFO ? odoo.modules.loading: loading 15 modules... 
+2026-11-22 23:16:57,177 4784 WARNING ? py.warnings: C:\Odoo\server\odoo\osv\__init__.py:4: DeprecationWarning: Since 19.0, odoo.osv is deprecated use odoo.fields.Domain
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1002, in _bootstrap
+    self._bootstrap_inner()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "C:\Odoo\server\odoo\service\server.py", line 132, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 363, in handle
+    super().handle()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "C:\Users\WellDone\AppData\Local\Programs\Python\Python311\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 335, in run_wsgi
+    execute(self.server.app)
+  File "C:\Users\WellDone\PycharmProjects\Odoo\.venv\Lib\site-packages\werkzeug\serving.py", line 322, in execute
+    application_iter = app(environ, start_response)
+  File "C:\Odoo\server\odoo\http.py", line 2852, in __call__
+    response = request._serve_db()
+  File "C:\Odoo\server\odoo\http.py", line 2275, in _serve_db
+    registry = Registry(self.db)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 108, in __new__
+    return cls.new(db_name)
+  File "C:\Odoo\server\odoo\tools\func.py", line 88, in locked
+    return func(inst, *args, **kwargs)
+  File "C:\Odoo\server\odoo\orm\registry.py", line 189, in new
+    load_modules(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 464, in load_modules
+    load_module_graph(
+  File "C:\Odoo\server\odoo\modules\loading.py", line 178, in load_module_graph
+    load_openerp_module(package.name)
+  File "C:\Odoo\server\odoo\modules\module.py", line 506, in load_openerp_module
+    __import__(qualname)
+  File "c:\odoo\server\custom_addons\library_rental\__init__.py", line 1, in <module>
+    from . import models
+  File "c:\odoo\server\custom_addons\library_rental\models\__init__.py", line 3, in <module>
+    from . import loan
+  File "c:\odoo\server\custom_addons\library_rental\models\loan.py", line 5, in <module>
+    from odoo.osv import expression
+  File "C:\Odoo\server\odoo\osv\__init__.py", line 4, in <module>
+    warnings.warn("Since 19.0, odoo.osv is deprecated use odoo.fields.Domain", DeprecationWarning)
+ 
+2026-11-22 23:16:57,423 4784 INFO ? odoo.modules.loading: 15 modules loaded in 0.37s, 0 queries (+0 extra) 
+2026-11-22 23:16:57,449 4784 INFO ? odoo.modules.loading: Modules loaded. 
+2026-11-22 23:16:57,461 4784 INFO ? odoo.registry: Registry loaded in 0.497s 
+2026-11-22 23:16:57,462 4784 INFO Test odoo.addons.base.models.ir_http: Generating routing map for key None 
+2026-11-22 23:16:58,045 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:58] "GET /odoo/action-121 HTTP/1.1" 200 - 85 0.083 0.999
+2026-11-22 23:16:58,063 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:58] "GET /odoo/action-121 HTTP/1.1" 200 - 9 0.007 0.010
+2026-11-22 23:16:58,194 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:58] "GET /web/webclient/load_menus HTTP/1.1" 200 - 12 0.015 0.080
+2026-11-22 23:16:58,194 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:58] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 6 0.025 0.066
+2026-11-22 23:16:58,204 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:58] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.008 0.091
+2026-11-22 23:16:58,295 4784 INFO ? werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:58] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.005
+2026-11-22 23:16:58,316 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:58] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 304 - 4 0.010 0.010
+2026-11-22 23:16:58,927 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:58] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 15 0.546 0.057
+2026-11-22 23:16:59,015 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:59] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 3 0.086 0.563
+2026-11-22 23:16:59,017 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:59] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.022 0.522
+2026-11-22 23:16:59,169 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:59] "POST /web/dataset/call_kw/library.book/get_views#library.book.get_views HTTP/1.1" 200 - 29 0.639 0.201
+2026-11-22 23:16:59,461 4784 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-11-22 23:16:59,623 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:16:59] "GET /web/webclient/translations?hash=2b6b5e856eafa8f36a62db36518c37552f19d65b&lang=uk_UA HTTP/1.1" 200 - 2 0.003 1.327
+2026-11-22 23:17:00,567 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:00] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.002
+2026-11-22 23:17:01,003 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:01] "POST /web/action/load HTTP/1.1" 200 - 9 0.015 0.007
+2026-11-22 23:17:01,034 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:01] "POST /web/dataset/call_kw/library.copy/get_views#library.copy.get_views HTTP/1.1" 200 - 10 0.010 0.012
+2026-11-22 23:17:01,051 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:01] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 4 0.007 0.005
+2026-11-22 23:17:01,395 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:01] "POST /web/action/load HTTP/1.1" 200 - 9 0.006 0.011
+2026-11-22 23:17:01,402 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:01] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.005 0.007
+2026-11-22 23:17:01,791 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:01] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.002 0.005
+2026-11-22 23:17:02,508 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:02] "POST /web/action/load HTTP/1.1" 200 - 9 0.003 0.005
+2026-11-22 23:17:02,542 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:02] "POST /web/dataset/call_kw/library.member/get_views#library.member.get_views HTTP/1.1" 200 - 18 0.011 0.013
+2026-11-22 23:17:02,562 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:02] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 3 0.009 0.006
+2026-11-22 23:17:04,487 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:04] "POST /web/action/load HTTP/1.1" 200 - 9 0.004 0.005
+2026-11-22 23:17:04,524 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:04] "POST /web/dataset/call_kw/library.loan/get_views#library.loan.get_views HTTP/1.1" 200 - 19 0.008 0.019
+2026-11-22 23:17:04,544 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:04] "POST /web/dataset/call_kw/library.loan/web_search_read#library.loan.web_search_read HTTP/1.1" 200 - 5 0.008 0.007
+2026-11-22 23:17:11,303 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:11] "POST /web/dataset/call_kw/library.member/web_search_read#library.member.web_search_read HTTP/1.1" 200 - 2 0.001 0.004
+2026-11-22 23:17:11,608 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:11] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.002 0.006
+2026-11-22 23:17:11,881 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:11] "POST /web/dataset/call_kw/library.copy/web_search_read#library.copy.web_search_read HTTP/1.1" 200 - 3 0.003 0.007
+2026-11-22 23:17:12,434 4784 INFO Test werkzeug: 127.0.0.1 - - [22/Nov/2026 23:17:12] "POST /web/dataset/call_kw/library.book/web_search_read#library.book.web_search_read HTTP/1.1" 200 - 2 0.002 0.005
+2026-11-22 23:17:44,175 4784 INFO ? odoo.service.server: Initiating shutdown 
+2026-11-22 23:17:44,177 4784 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-11-22 23:17:44,572 4784 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 
+2026-11-22 23:17:44,572 4784 INFO ? odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 7 connections  

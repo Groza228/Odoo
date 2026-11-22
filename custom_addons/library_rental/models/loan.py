@@ -1,3 +1,5 @@
+import logging
+
 from odoo import api, fields, models
 from odoo.exceptions import UserError, ValidationError
 from odoo.osv import expression
@@ -5,6 +7,7 @@ from odoo.osv import expression
 
 LOAN_PERIOD_DAYS = 14
 FINE_PER_DAY = 5.0
+_logger = logging.getLogger(__name__)
 
 
 class LibraryLoan(models.Model):
@@ -292,3 +295,36 @@ class LibraryLoan(models.Model):
                 {'state': 'active', 'return_date': False}
             )
         return True
+
+    @api.model
+    def _cron_check_overdue_loans(self):
+        loans = self.search([('display_state', '=', 'overdue')])
+        processed = 0
+        errors = 0
+
+        for loan in loans:
+            try:
+                with self.env.cr.savepoint():
+                    _logger.info(
+                        'Library loan %s: читач %s, книга %s, '
+                        'днів прострочення %s, поточний штраф %s',
+                        loan.id,
+                        loan.member_id.name,
+                        loan.book_id.name,
+                        loan.days_late,
+                        loan.current_fine,
+                    )
+                    processed += 1
+            except Exception:
+                errors += 1
+                _logger.exception(
+                    'Не вдалося обробити видачу %s',
+                    loan.id,
+                )
+
+        _logger.info(
+            'Library cron: знайдено %s прострочених видач, помилок %s',
+            len(loans),
+            errors,
+        )
+        return processed
